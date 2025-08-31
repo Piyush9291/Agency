@@ -15,6 +15,8 @@ const navItems = [
   { name: "Marketing", type: "dropdown" },
   { name: "Blog", href: "/pages/Blog" },
   { name: "Contact", href: "/pages/Contact" },
+   { name: "Pages", href: "/pages/Contact" },
+      { name: "Jatin", href: "/pages/Contact" },
 ];
 
 const developmentItems = [
