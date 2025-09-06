@@ -48,11 +48,11 @@ const Page = () => {
     <div className="font-poppins">
       {/* Hero Section */}
       <section className="bg-white">
-        <div className="w-full text-center py-10 sm:py-12 md:py-16 lg:py-20 px-4 bg-gradient-to-r from-[#f3f0f3] to-[#dcbae8]">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold tracking-tight drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#199db2] via-[#2D3363] to-[#d2276e] leading-tight">
+        <div className="w-full text-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 bg-gradient-to-r from-[#f3f0f3] to-[#dcbae8]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#199db2] via-[#2D3363] to-[#d2276e] leading-tight">
             Website <br /> Maintenance
           </h1>
-          <p className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
             Itorix Infotech LLP offers professional{" "}
             <strong className="text-black">website maintenance services in Delhi</strong> ensuring your site runs
             smoothly and stays updated. Our team handles all technical aspects so you can focus on growing your
@@ -62,7 +62,7 @@ const Page = () => {
         <img
           src="/website.webp"
           alt="Website Design"
-          className="mx-auto mt-4 sm:mt-6 md:mt-8 max-w-[90%] sm:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] w-full h-auto rounded-xl shadow-lg"
+          className="mx-auto mt-6 sm:mt-8 md:mt-10 max-w-[90%] sm:max-w-[800px] w-full h-auto rounded-xl shadow-lg"
         />
       </section>
 
@@ -77,7 +77,7 @@ const Page = () => {
           combine expertise with innovative ideas to build websites that reflect your brand. Being the best{" "}
           <strong>SEO Agency in Pune</strong>, we also ensure your website ranks well and attracts the right audience.
         </p>
-        <div className="max-w-6xl mx-auto grid gap-3 sm:gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="max-w-5xl mx-auto grid gap-3 sm:gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -149,40 +149,31 @@ const Page = () => {
         </p>
       </section>
 
-      {/* Final Step Section */}
-      <section className="w-full bg-white py-10 sm:py-12 md:py-16 lg:py-20 px-4 md:px-8 font-poppins">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      {/* Final Step Section - standardized to match Ecommerce/Dev/Shopify */}
+      <section className="w-full bg-white py-12 sm:py-16 md:py-20 px-4 md:px-10 font-poppins">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 bg-gradient-to-br from-[#6D5ACD] to-[#C091D1] text-white shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="relative rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-[#6D5ACD] to-[#C091D1] text-white shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              {/* Vertical Dashed Line for sm+ screens */}
               {index !== steps.length - 1 && (
-                <div className="absolute top-5 left-8 h-full border-l-2 border-dashed border-white/40 z-0 hidden sm:block"></div>
+                <div className="absolute top-6 left-10 h-full border-l-2 border-dashed border-white/40 z-0 hidden sm:block"></div>
               )}
-              {/* Icon */}
-              <div className="bg-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 rounded-full flex items-center justify-center shadow-lg mb-3 sm:mb-4 md:mb-5 z-10">
+              <div className="bg-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg mb-3 sm:mb-4 z-10">
                 <Image
                   src={step.img || "/placeholder.svg"}
                   alt={step.title}
                   width={32}
                   height={32}
-                  className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
+                  className="sm:w-10 sm:h-10 object-contain"
                 />
               </div>
-              {/* Number */}
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2 sm:mb-3 z-10">
-                {step.id}
-              </div>
-              {/* Title */}
-              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold uppercase leading-snug mb-2 sm:mb-3 md:mb-4 z-10">
+              <div className="text-2xl sm:text-3xl font-extrabold mb-2 z-10">{step.id}</div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase leading-snug mb-2 sm:mb-3 z-10">
                 {step.title}
               </h3>
-              {/* Description */}
-              <p className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed z-10">
-                {step.desc}
-              </p>
+              <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed z-10">{step.desc}</p>
             </div>
           ))}
         </div>

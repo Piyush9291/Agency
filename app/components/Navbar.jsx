@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Menu, X, Layers, FileText, Settings,
-  MonitorSmartphone, ShoppingBag, ShoppingCart, ChevronDown,
+  MonitorSmartphone, ShoppingBag, ShoppingCart, ChevronDown, MessageCircle,
+  Search, Target, Users, PenTool, Mail, Palette
 } from "lucide-react";
 
 const navItems = [
@@ -15,8 +16,7 @@ const navItems = [
   { name: "Marketing", type: "dropdown" },
   { name: "Blog", href: "/pages/Blog" },
   { name: "Contact", href: "/pages/Contact" },
-   { name: "Pages", href: "/pages/Contact" },
-      { name: "Jatin", href: "/pages/Contact" },
+  { name: "Pages", href: "/pages/Contact" },
 ];
 
 const developmentItems = [
@@ -28,10 +28,14 @@ const developmentItems = [
   { icon: <ShoppingCart className="text-cyan-500 w-5 h-5" />, text: "E-commerce Website", href: "/pages/Ecommerce" },
 ]
 
-const marketingItems = {
-  SEO: ["Local SEO", "International SEO", "Location Wise SEO", "Country Wise SEO", "State Wise SEO", "City Wise SEO", "E-Commerce SEO"],
-  Social: ["Facebook Marketing", "Instagram Marketing", "LinkedIn Marketing", "PPC Marketing", "Lead Generation", "Email Marketing"],
-};
+const marketingItems = [
+  { icon: <Search className="text-cyan-500 w-5 h-5" />, text: "SEO", href: "/pages/Seo" },
+  { icon: <Target className="text-cyan-500 w-5 h-5" />, text: "Google Ads", href: "/pages/GoogleAds" },
+  { icon: <Users className="text-cyan-500 w-5 h-5" />, text: "Social Media", href: "/pages/SocialMarketing" },
+  { icon: <PenTool className="text-cyan-500 w-5 h-5" />, text: "Content Marketing", href: "/pages/ContentMarketing" },
+  { icon: <Mail className="text-cyan-500 w-5 h-5" />, text: "Email Marketing", href: "/pages/EmailMarketing" },
+  { icon: <Palette className="text-cyan-500 w-5 h-5" />, text: "Branding", href: "/pages/Branding" },
+]
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -65,26 +69,13 @@ const Navbar = () => {
                           </Link>
                         ))}
 
-                      {item.name === "Marketing" && (
-                        <>
-                          <div>
-                            <h4 className="text-lg font-semibold mb-4">SEO Services</h4>
-                            {marketingItems.SEO.map((seo) => (
-                              <Link key={seo} href={`/marketing/seo/${seo.toLowerCase().replace(/\s+/g, "-")}`} className="block px-3 py-1 text-sm font-semibold text-slate-400 hover:text-blue-600">
-                                {seo}
-                              </Link>
-                            ))}
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold mb-4">Social Media</h4>
-                            {marketingItems.Social.map((social) => (
-                              <Link key={social} href={`/marketing/social/${social.toLowerCase().replace(/\s+/g, "-")}`} className="block px-3 py-1 text-sm font-semibold text-slate-400 hover:text-blue-600">
-                                {social}
-                              </Link>
-                            ))}
-                          </div>
-                        </>
-                      )}
+                      {item.name === "Marketing" &&
+                        marketingItems.map(({ icon, text, href }) => (
+                          <Link key={text} href={href} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                            {icon}
+                            <span className="text-[15px] font-semibold text-slate-400 hover:text-blue-600">{text}</span>
+                          </Link>
+                        ))}
                     </div>
                   </div>
                 </div>
@@ -97,7 +88,18 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/919568282382" // <-- apna WhatsApp number dalna
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-green-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-green-600 transition shadow-md"
+            >
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp
+            </a>
+
             <Link href="/pages/Quote">
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-purple-600 hover:to-blue-600 transition shadow-md">
                 Get A Quote
@@ -131,22 +133,13 @@ const Navbar = () => {
                       </Link>
                     ))}
 
-                  {item.name === "Marketing" && (
-                    <>
-                      <h4 className="text-sm font-semibold mt-3">SEO Services</h4>
-                      {marketingItems.SEO.map((seo) => (
-                        <Link key={seo} href={`/marketing/seo/${seo.toLowerCase().replace(/\s+/g, "-")}`} className="block px-3 py-1 text-sm font-semibold text-slate-400 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
-                          {seo}
-                        </Link>
-                      ))}
-                      <h4 className="text-sm font-semibold mt-3">Social Media</h4>
-                      {marketingItems.Social.map((social) => (
-                        <Link key={social} href={`/marketing/social/${social.toLowerCase().replace(/\s+/g, "-")}`} className="block px-3 py-1 text-sm font-semibold text-slate-400 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
-                          {social}
-                        </Link>
-                      ))}
-                    </>
-                  )}
+                  {item.name === "Marketing" &&
+                    marketingItems.map(({ icon, text, href }) => (
+                      <Link key={text} href={href} className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-50 text-sm font-semibold text-slate-400 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
+                        {icon}
+                        {text}
+                      </Link>
+                    ))}
                 </div>
               </details>
             ) : (
@@ -156,7 +149,7 @@ const Navbar = () => {
             )
           )}
 
-          <div className="px-4 pt-4 border-t mt-4">
+          <div className="px-4 pt-4 border-t mt-4 space-y-3">
             <Link href="/pages/Quote">
               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-full font-semibold text-base hover:from-purple-600 hover:to-blue-600 transition">
                 Get A Quote

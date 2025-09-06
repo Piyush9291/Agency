@@ -60,12 +60,11 @@ const Page = () => {
       <section className="bg-white">
         <div className="w-full text-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 bg-gradient-to-r from-[#f3f0f3] to-[#dcbae8]">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#199db2] via-[#2D3363] to-[#d2276e] leading-tight">
-            Pay Per Click <br /> Marketing
+            Google Ads <br /> Marketing
           </h1>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Harness social media's power to connect, shape brands, and extend reach. Effective social media marketing
-            complements PPC efforts, driving targeted traffic and boosting brand visibility. Seeking social media
-            support? Let's connect!
+            Itorix Infotech is a professional <strong className="text-black">Google Ads marketing company in DELHI</strong>.
+            We create targeted ad campaigns that drive qualified traffic, increase conversions, and maximize your ROI with strategic Google Ads management.
           </p>
         </div>
         <img

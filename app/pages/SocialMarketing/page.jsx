@@ -39,18 +39,18 @@ const Page = () => {
     <div className="font-poppins">
       {/* Hero Section */}
       <section className="bg-white">
-        <div className="text-center py-16 px-4 sm:px-6 lg:px-10 bg-gradient-to-r from-[#ea9ee2] to-[#dbc8e2]">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#199db2] via-[#2D3363] to-[#d2276e] leading-tight">
-            Social<br />Media Marketing Company In DELHI
+        <div className="w-full text-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 bg-gradient-to-r from-[#f3f0f3] to-[#dcbae8]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#199db2] via-[#2D3363] to-[#d2276e] leading-tight">
+            Social Media Marketing <br /> Company In DELHI
           </h1>
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
             In today’s fast-moving digital world, a strong social media presence is crucial for business success. Pune, with its thriving industries and startups, has seen an increasing need for social media marketing services. If you’re looking for a trustworthy <strong className="text-black">social media marketing company in Delhi</strong>, Itorix Infotech is your best choice.
           </p>
         </div>
         <img
           src="/socialmarketing.webp"
-          alt="Website Design"
-          className="mx-auto mt-10 max-w-4xl w-full h-auto rounded-xl shadow-lg"
+          alt="Social Media Marketing"
+          className="mx-auto mt-6 sm:mt-8 md:mt-10 max-w-[90%] sm:max-w-[800px] w-full h-auto rounded-xl shadow-lg"
         />
       </section>
 

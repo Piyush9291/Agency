@@ -29,7 +29,7 @@ export default function ServicesSection() {
       description:
         "Secure top search rankings for preferred keywords, generating vital leads essential for business development. Optimize for targeted search terms..",
       iconColor: "text-red-400",
-      href: "/pages/",
+      href: "/pages/Seo",
       gradient: "from-purple-600 via-purple-500 to-pink-400",
     },
     {
@@ -75,24 +75,24 @@ export default function ServicesSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
               <Link
                 key={index}
                 href={service.href}
-                className="group block transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
+                className="group block h-full transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
               >
                 <div
-                  className={`bg-gradient-to-br ${service.gradient} rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-purple-200/20 backdrop-blur-sm relative overflow-hidden`}
+                  className={`bg-gradient-to-br ${service.gradient} rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-purple-200/20 backdrop-blur-sm relative overflow-hidden h-full flex flex-col`}
                 >
                   {/* Decorative Background */}
                   <div className="absolute inset-0 bg-white/5 backdrop-blur-3xl"></div>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex-1 flex flex-col">
                     <div className="flex items-start justify-between mb-6">
                       <h3 className="text-xl sm:text-2xl font-bold text-white font-poppins leading-tight pr-4">
                         {service.title}
@@ -106,7 +106,7 @@ export default function ServicesSection() {
                       {service.description}
                     </p>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto">
                       <div className="text-white font-semibold text-sm sm:text-base inline-flex items-center group-hover:translate-x-1 transition-transform duration-300">
                         Read More
                         <span className="ml-2 text-lg group-hover:translate-x-1 transition-transform duration-300">

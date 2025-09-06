@@ -73,11 +73,11 @@ const Page = () => {
           Choose Itorix Infotech for expert web design: 10+ years experience, tailored solutions, 500+ successful
           projects worldwide, and a commitment to your business goals.
         </p>
-        <div className="max-w-6xl mx-auto grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <div className="max-w-5xl mx-auto grid gap-3 sm:gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-[10px] bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-white font-medium text-sm sm:text-base md:text-lg p-4 sm:p-5 shadow-md transition-all duration-300 hover:scale-105 text-center"
+              className="rounded-[8px] bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-white font-medium text-xs sm:text-sm md:text-base p-3 sm:p-4 md:p-5 shadow-md transition-all duration-300 hover:scale-105 text-center"
             >
               {feature}
             </div>
@@ -114,16 +114,16 @@ const Page = () => {
               business can adapt and grow in today's competitive e-commerce landscape.
             </p>
             {/* Services Tags */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 pt-3 sm:pt-4">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300"
+                  className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 rounded-lg bg-white/70 backdrop-blur-sm border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white" />
                   </div>
-                  <span className="text-slate-700 font-medium text-sm sm:text-base">{service}</span>
+                  <span className="text-slate-700 font-medium text-xs sm:text-sm md:text-base">{service}</span>
                 </div>
               ))}
             </div>
@@ -178,52 +178,56 @@ const Page = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full bg-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-10 lg:px-20 font-poppins">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
+      <section className="w-full bg-white py-10 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 font-poppins">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {/* Left Stats */}
-          <div className="flex flex-col gap-8 sm:gap-10 items-center lg:items-start justify-center">
+          <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 items-center lg:items-start justify-center">
             {/* Website Design */}
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
                 <CountUp start={1} end={500} duration={3} />+
               </h2>
-              <p className="text-gray-700 mt-2 text-base sm:text-lg md:text-xl font-medium">Website Design</p>
+              <p className="text-gray-700 mt-2 sm:mt-3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
+                Website Design
+              </p>
             </div>
             {/* UI/UX Design */}
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
                 <CountUp start={1} end={600} duration={3} />+
               </h2>
-              <p className="text-gray-700 mt-2 text-base sm:text-lg md:text-xl font-medium">UI/UX Design</p>
+              <p className="text-gray-700 mt-2 sm:mt-3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
+                UI/UX Design
+              </p>
             </div>
           </div>
           {/* Right Features */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {/* Card 1 */}
-            <div className="bg-[#f8f8fc] rounded-2xl border border-gray-100 p-5 sm:p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
+            <div className="bg-[#f8f8fc] rounded-xl border border-gray-100 p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 md:mb-4 leading-snug">
                   Decade of Excellence
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">
                   With over 10 years of B2B client services and industry experience, trust our seasoned expertise.
                 </p>
               </div>
               <Image
                 src="/img1.png"
                 alt="Decade of Excellence"
-                width={150}
-                height={75}
-                className="mt-4 sm:mt-6 mx-auto w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] object-contain"
+                width={180}
+                height={90}
+                className="mt-4 sm:mt-6 md:mt-8 mx-auto w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] object-contain"
               />
             </div>
             {/* Card 2 */}
-            <div className="bg-[#f8f8fc] rounded-2xl border border-gray-100 p-5 sm:p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
+            <div className="bg-[#f8f8fc] rounded-xl border border-gray-100 p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 md:mb-4 leading-snug">
                   Global Impact
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">
                   Serving 500+ clients worldwide, our highly skilled team delivers tailored, quality web solutions for
                   sustainable business growth.
                 </p>
@@ -231,9 +235,9 @@ const Page = () => {
               <Image
                 src="/img1.png"
                 alt="Global Impact"
-                width={150}
-                height={75}
-                className="mt-4 sm:mt-6 mx-auto w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] object-contain"
+                width={180}
+                height={90}
+                className="mt-4 sm:mt-6 md:mt-8 mx-auto w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] object-contain"
               />
             </div>
           </div>

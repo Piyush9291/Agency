@@ -45,7 +45,7 @@ const Page = () => {
             Software
             <br /> Development
           </h1>
-          <p className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl mt-4 sm:mt-6 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-medium">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
             Itorix Infotech is a top <strong className="text-black">software development company in Pune,</strong>{" "}
             offering reliable and innovative solutions. We specialize in creating custom software to meet your business
             needs.
@@ -68,11 +68,11 @@ const Page = () => {
           Choose Itorix Infotech for software development because we deliver tailored solutions that match your business
           goals. Our expertise ensures reliable and innovative software solutions to drive your success.
         </p>
-        <div className="max-w-6xl mx-auto grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <div className="max-w-5xl mx-auto grid gap-3 sm:gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-[10px] bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-white font-medium text-sm sm:text-base md:text-lg p-4 sm:p-5 shadow-md transition-all duration-300 hover:scale-105 text-center"
+              className="rounded-[8px] bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-white font-medium text-xs sm:text-sm md:text-base p-3 sm:p-4 md:p-5 shadow-md transition-all duration-300 hover:scale-105 text-center"
             >
               {feature}
             </div>
@@ -133,7 +133,7 @@ const Page = () => {
         </p>
       </section>
 
-      {/* Final Step Section */}
+      {/* Final Step Section - ensure consistent 3-card UI */}
       <section className="w-full bg-white py-12 sm:py-16 md:py-20 px-4 md:px-10 font-poppins">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {steps.map((step, index) => (
@@ -141,11 +141,9 @@ const Page = () => {
               key={index}
               className="relative rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-[#6D5ACD] to-[#C091D1] text-white shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              {/* Vertical Dashed Line for sm+ screens */}
               {index !== steps.length - 1 && (
                 <div className="absolute top-6 left-10 h-full border-l-2 border-dashed border-white/40 z-0 hidden sm:block"></div>
               )}
-              {/* Icon */}
               <div className="bg-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg mb-3 sm:mb-4 z-10">
                 <Image
                   src={step.img || "/placeholder.svg"}
@@ -155,13 +153,10 @@ const Page = () => {
                   className="sm:w-10 sm:h-10 object-contain"
                 />
               </div>
-              {/* Number */}
               <div className="text-2xl sm:text-3xl font-extrabold mb-2 z-10">{step.id}</div>
-              {/* Title */}
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase leading-snug mb-2 sm:mb-3 z-10">
                 {step.title}
               </h3>
-              {/* Description */}
               <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed z-10">{step.desc}</p>
             </div>
           ))}
@@ -169,52 +164,56 @@ const Page = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full bg-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-10 lg:px-20 font-poppins">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
+      <section className="w-full bg-white py-10 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 font-poppins">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {/* Left Stats */}
-          <div className="flex flex-col gap-8 sm:gap-10 items-center lg:items-start justify-center">
+          <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 items-center lg:items-start justify-center">
             {/* Website Design */}
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
                 <CountUp start={1} end={500} duration={3} />+
               </h2>
-              <p className="text-gray-700 mt-2 text-base sm:text-lg md:text-xl font-medium">Website Design</p>
+              <p className="text-gray-700 mt-2 sm:mt-3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
+                Website Design
+              </p>
             </div>
             {/* UI/UX Design */}
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#6D5ACD] to-[#C091D1] text-transparent bg-clip-text">
                 <CountUp start={1} end={600} duration={3} />+
               </h2>
-              <p className="text-gray-700 mt-2 text-base sm:text-lg md:text-xl font-medium">UI/UX Design</p>
+              <p className="text-gray-700 mt-2 sm:mt-3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
+                UI/UX Design
+              </p>
             </div>
           </div>
           {/* Right Features */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {/* Card 1 */}
-            <div className="bg-[#f8f8fc] rounded-2xl border border-gray-100 p-5 sm:p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
+            <div className="bg-[#f8f8fc] rounded-xl border border-gray-100 p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 md:mb-4 leading-snug">
                   Decade of Excellence
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">
                   With over 10 years of B2B client services and industry experience, trust our seasoned expertise.
                 </p>
               </div>
               <Image
                 src="/img1.png"
                 alt="Decade of Excellence"
-                width={150}
-                height={75}
-                className="mt-4 sm:mt-6 mx-auto w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] object-contain"
+                width={180}
+                height={90}
+                className="mt-4 sm:mt-6 md:mt-8 mx-auto w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] object-contain"
               />
             </div>
             {/* Card 2 */}
-            <div className="bg-[#f8f8fc] rounded-2xl border border-gray-100 p-5 sm:p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
+            <div className="bg-[#f8f8fc] rounded-xl border border-gray-100 p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 ease-in-out hover:-translate-y-1">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#1a1a40] mb-2 sm:mb-3 md:mb-4 leading-snug">
                   Global Impact
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">
                   Serving 500+ clients worldwide, our highly skilled team delivers tailored, quality web solutions for
                   sustainable business growth.
                 </p>
@@ -222,9 +221,9 @@ const Page = () => {
               <Image
                 src="/img1.png"
                 alt="Global Impact"
-                width={150}
-                height={75}
-                className="mt-4 sm:mt-6 mx-auto w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] object-contain"
+                width={180}
+                height={90}
+                className="mt-4 sm:mt-6 md:mt-8 mx-auto w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] object-contain"
               />
             </div>
           </div>

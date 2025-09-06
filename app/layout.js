@@ -9,6 +9,7 @@ const poppins = Poppins({
 });
 
 import Navbar from "./components/Navbar";
+import WhatsAppFloating from "./components/WhatsAppFloating";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar/>
         {children}
+        <WhatsAppFloating />
       </body>
     </html>
   );
