@@ -7,9 +7,25 @@ const WhatsAppFloating = () => {
     // Replace with your actual WhatsApp number
     const phoneNumber = "919654746691"; // Remove + and spaces
     const message = "Hello! I'm interested in your services.";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    window.open(whatsappUrl, '_blank');
+    // Check if user is on mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // For mobile devices, try to open WhatsApp app directly
+      const whatsappAppUrl = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+      window.location.href = whatsappAppUrl;
+      
+      // Fallback to web version if app doesn't open
+      setTimeout(() => {
+        const whatsappWebUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappWebUrl, '_blank');
+      }, 1000);
+    } else {
+      // For desktop, open WhatsApp web
+      const whatsappWebUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappWebUrl, '_blank');
+    }
   };
 
   return (
