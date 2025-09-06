@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 const WhatsAppFloating = () => {
   const handleWhatsAppClick = () => {
     // Replace with your actual WhatsApp number
-    const phoneNumber = "919568282382"; // Remove + and spaces
+    const phoneNumber = "919654746691"; // Remove + and spaces
     const message = "Hello! I'm interested in your services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
