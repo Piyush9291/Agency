@@ -26,7 +26,7 @@ export default function AboutPage() {
           {/* Text Section */}
           <div className="w-full lg:w-3/5 animate-fade-in-right space-y-4 md:space-y-6">
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight font-poppins animate-fade-in-up"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-slate-800 leading-tight animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
               Story of <br />
@@ -36,24 +36,24 @@ export default function AboutPage() {
             </h1>
 
             <p
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed animate-fade-in-up"
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-body text-gray-600 leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
               <strong className="text-slate-800">Itorix Infotech</strong> is a{" "}
               <strong className="text-slate-800">Web Development</strong> &{" "}
-              <strong className="text-slate-800">Digital Marketing Agency in Pune</strong> that focuses on quality,
+              <strong className="text-slate-800">Digital Marketing Agency in Delhi</strong> that focuses on quality,
               innovation, and speed. We use technology to deliver measurable growth for our clients.
             </p>
 
             <h2
-              className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-slate-700 font-poppins animate-fade-in-up"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-slate-700 animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
               Your Ideal Digital Marketing Agency for Business Success
             </h2>
 
             <p
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed animate-fade-in-up"
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-body text-gray-600 leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.5s" }}
             >
               Just like a good recipe needs the right ingredients, your digital strategy needs the right parts to

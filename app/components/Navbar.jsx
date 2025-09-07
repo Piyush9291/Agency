@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -39,9 +39,38 @@ const marketingItems = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <header className="sticky top-0 bg-white z-50 border-b shadow-sm font-body">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex-shrink-0">
+              <Image src="/itorix-logo.png" alt="Itorix Infotech" width={200} height={40} className="h-8 w-auto" priority />
+            </Link>
+            <div className="hidden lg:flex items-center flex-1 justify-center">
+              <div className="h-6 w-32 bg-gray-200 rounded animate-pulse"></div>
+            </div>
+            <div className="hidden lg:flex items-center gap-3">
+              <div className="h-8 w-20 bg-gray-200 rounded animate-pulse"></div>
+              <div className="h-8 w-24 bg-gray-200 rounded animate-pulse"></div>
+            </div>
+            <div className="lg:hidden">
+              <div className="h-6 w-6 bg-gray-200 rounded animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
-    <header className="sticky top-0 bg-white z-50 border-b shadow-sm font-[Poppins]">
+    <header className="sticky top-0 bg-white z-50 border-b shadow-sm font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex-shrink-0">

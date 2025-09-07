@@ -2,7 +2,7 @@ import React from 'react'
 // import Navbar from './components/Navbar';
 import Header from './components/Harder';
 import AboutPage from './components/About';
-import ServicesSection from './components/ouerservices';
+import ServicesSection from './components/ourservices';
 import WhyChooseUs from './components/WhyChooseUs';
 import FAQContactForm from './components/Faq';
 import Footer from './components/Footer';

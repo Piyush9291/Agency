@@ -63,7 +63,7 @@ const Page = () => {
             Google Ads <br /> Marketing
           </h1>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Itorix Infotech is a professional <strong className="text-black">Google Ads marketing company in DELHI</strong>.
+            Itorix Infotech is a professional <strong className="text-black font-bold">Google Ads marketing company in DELHI</strong>.
             We create targeted ad campaigns that drive qualified traffic, increase conversions, and maximize your ROI with strategic Google Ads management.
           </p>
         </div>

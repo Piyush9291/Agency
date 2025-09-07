@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
           <h3 className="text-[#1f2a61] font-semibold text-xs sm:text-sm md:text-base uppercase tracking-widest mb-2">
             Why Choose Us
           </h3>
-          <h2 className="text-[#1f2a61] text-2xl sm:text-3xl md:text-5xl font-extrabold leading-snug md:leading-tight">
+          <h2 className="text-[#1f2a61] text-2xl sm:text-3xl md:text-5xl font-heading font-extrabold leading-snug md:leading-tight">
             Itorix Infotech For Digital <br className="hidden md:block" />
             Marketing Services?
           </h2>
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
               key={index}
               className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center"
             >
-              <h4 className="text-lg font-semibold mb-3 text-[#1f2a61]">
+              <h4 className="text-lg font-heading font-semibold mb-3 text-[#1f2a61]">
                 {item.isSpecial ? (
                   <span className="text-[#1f2a61] px-2 py-1 rounded ">
                     {item.title}
@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
                   item.title
                 )}
               </h4>
-              <p className="text-gray-600 text-m  leading-relaxed">{item.desc}</p>
+              <p className="text-gray-600 text-sm sm:text-base font-body leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

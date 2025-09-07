@@ -24,7 +24,7 @@ const AnimatedText = () => {
     // text-left for alignment.
     // mt-3 for top margin.
     // animate-fade-in applies a custom fade-in animation defined in the CSS.
-    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-700 transition-all duration-700 ease-in-out text-left mt-3 animate-fade-in">
+    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-blue-700 transition-all duration-700 ease-in-out text-left mt-3 animate-fade-in">
       {texts[index]}
     </h3>
   );
@@ -68,10 +68,10 @@ const Header = () => {
           {/* text-4xl (default) sm:text-5xl md:text-5xl lg:text-6xl for graduated sizing. */}
           {/* font-extrabold and text-gray-900 for strong visual impact. */}
           {/* leading-tight reduces line height for a more compact look. */}
-          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-2">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-heading font-extrabold text-gray-900 leading-tight mb-2">
             Easy Way To
           </h1>
-          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-heading font-extrabold text-gray-900 mb-4 leading-tight">
             Success
           </h1>
 
@@ -85,7 +85,7 @@ const Header = () => {
           {/* leading-relaxed for comfortable line spacing. */}
           {/* max-w-full sm:max-w-xl prevents paragraph from becoming too wide on large screens, improving readability. */}
           {/* animate-fade-in-up applies custom animation. */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-4 leading-relaxed max-w-full sm:max-w-xl animate-fade-in-up">
+          <p className="text-base sm:text-lg md:text-xl font-body text-gray-600 mt-4 leading-relaxed max-w-full sm:max-w-xl animate-fade-in-up">
             We've designed our entire process and products around providing
             everything a small business needs when starting out — quick,
             easy, and hassle-free.
@@ -105,7 +105,7 @@ const Header = () => {
             {/* hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-out for hover effects. */}
             {/* flex items-center justify-center gap-2 for content alignment and spacing inside button. */}
             {/* whitespace-nowrap prevents text from wrapping inside the button. */}
-            <button className="group w-full sm:w-auto bg-gradient-to-r from-purple-600 via-purple-700 to-cyan-600 text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-out flex items-center justify-center gap-2 whitespace-nowrap">
+            <button className="group w-full sm:w-auto bg-gradient-to-r from-purple-600 via-purple-700 to-cyan-600 text-white px-6 py-3 rounded-full text-base font-secondary font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-out flex items-center justify-center gap-2 whitespace-nowrap">
               <span className="relative z-10 whitespace-nowrap">Schedule a Call</span>
               <span className="text-xl group-hover:translate-x-2 transition-transform duration-500">→</span>
             </button>
@@ -114,7 +114,7 @@ const Header = () => {
             {/* Similar responsive width and styling as the first button. */}
             {/* border-2 border-blue-600 text-blue-600 bg-white for outline style. */}
             {/* hover:bg-blue-600 hover:text-white for hover state inversion. */}
-            <button className="group w-full sm:w-auto border-2 border-blue-600 text-blue-600 bg-white px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-600 hover:text-white transition-all duration-500 transform hover:-translate-y-1 flex items-center justify-center gap-2 shadow-md hover:shadow-xl whitespace-nowrap">
+            <button className="group w-full sm:w-auto border-2 border-blue-600 text-blue-600 bg-white px-6 py-3 rounded-full text-base font-secondary font-semibold hover:bg-blue-600 hover:text-white transition-all duration-500 transform hover:-translate-y-1 flex items-center justify-center gap-2 shadow-md hover:shadow-xl whitespace-nowrap">
               <span className="whitespace-nowrap">Our Portfolio</span>
               <span className="text-xl group-hover:translate-x-2 transition-transform duration-500">→</span>
             </button>
