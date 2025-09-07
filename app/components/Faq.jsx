@@ -14,6 +14,11 @@ export default function FAQContactForm() {
         "Social Media Marketing",
         "E-commerce Website",
         "Google Adwords",
+        "Lead Generation",
+        "Graphics Design (Logo, Cards, Signage/Boards etc.)",
+        "Web Hosting",
+        "Domain Registration",
+        "Others"
     ];
 
     const faqs = [
@@ -118,11 +123,6 @@ export default function FAQContactForm() {
                                 className="w-full border-0 border-b border-gray-400 px-1 py-2 placeholder-gray-600 text-black focus:outline-none focus:border-[#2A63FE]"
                             />
                         </div>
-                        <input
-                            type="text"
-                            placeholder="Company Name"
-                            className="w-full border-0 border-b border-gray-400 px-1 py-2 placeholder-gray-600 text-black focus:outline-none focus:border-[#2A63FE]"
-                        />
                         <select
                             value={selectedService}
                             onChange={(e) => setSelectedService(e.target.value)}
