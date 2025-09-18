@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex-shrink-0">
-              <Image src="/itorix-logo.png" alt="Itorix Infotech" width={200} height={40} className="h-8 w-auto" priority />
+              <Image src="Kaaftek.jpg" alt="Itorix Infotech" width={200} height={40} className="h-8 w-auto" priority />
             </Link>
             <div className="hidden lg:flex items-center flex-1 justify-center">
               <div className="h-6 w-32 bg-gray-200 rounded animate-pulse"></div>
@@ -73,9 +73,9 @@ const Navbar = () => {
     <header className="sticky top-0 bg-white z-50 border-b shadow-sm font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex-shrink-0">
-            <Image src="/itorix-logo.png" alt="Itorix Infotech" width={200} height={40} className="h-8 w-auto" priority />
-          </Link>
+        <Link href="/" className="flex-shrink-0">
+              <Image src="Kaaftek.jpg" alt="Itorix Infotech" width={200} height={40} className="h-8 w-auto" priority />
+            </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center flex-1 justify-center space-x-8">
@@ -120,7 +120,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-3">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/919568282382" // <-- apna WhatsApp number dalna
+              href="https://wa.me/919568282382?text=Hello! I'm interested in your services. Can you help me?"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-green-600 transition shadow-md"
@@ -179,7 +179,19 @@ const Navbar = () => {
           )}
 
           <div className="px-4 pt-4 border-t mt-4 space-y-3">
-            <Link href="/pages/Quote">
+            {/* WhatsApp Button for Mobile */}
+            <a
+              href="https://wa.me/919568282382?text=Hello! I'm interested in your services. Can you help me?"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-green-500 text-white px-5 py-3 rounded-full text-base font-semibold hover:bg-green-600 transition shadow-md"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp
+            </a>
+            
+            <Link href="/pages/Quote" onClick={() => setMobileMenuOpen(false)}>
               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-full font-semibold text-base hover:from-purple-600 hover:to-blue-600 transition">
                 Get A Quote
               </button>

@@ -78,7 +78,7 @@ export default function FAQContactForm() {
                             <div key={index}>
                                 <div
                                     onClick={() => toggleFAQ(index)}
-                                    className="bg-[#28a9b3] text-[#2D3363] px-6 py-4 rounded-t-xl flex justify-between items-center cursor-pointer"
+                                    className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-400 text-white px-6 py-4 rounded-t-xl flex justify-between items-center cursor-pointer"
                                 >
                                     <span className="font-semibold">{faq.question}</span>
                                     <span className={`transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}>

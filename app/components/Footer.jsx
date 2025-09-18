@@ -47,7 +47,7 @@ const Footer = () => {
             title="Itorix Infotech Location"
           ></iframe>
           <p className="flex items-center gap-2 mb-2 text-sm sm:text-base">
-            <FaPhoneAlt className="text-[#28a9b3] w-4 h-4 sm:w-5 sm:h-5" />
+            <FaPhoneAlt className="text-purple-500 w-4 h-4 sm:w-5 sm:h-5" />
             <a href="tel:+919579335001" className="hover:text-blue-400 transition-colors">
               +91 9579335001
             </a>{" "}
@@ -57,7 +57,7 @@ const Footer = () => {
             </a>
           </p>
           <p className="flex items-center gap-2 text-sm sm:text-base">
-            <MdEmail className="text-[#28a9b3] w-4 h-4 sm:w-5 sm:h-5" />
+            <MdEmail className="text-purple-500 w-4 h-4 sm:w-5 sm:h-5" />
             <a href="mailto:info@itorixinfotech.com" className="hover:text-blue-400 transition-colors">
               info@itorixinfotech.com
             </a>
