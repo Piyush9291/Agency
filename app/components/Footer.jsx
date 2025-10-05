@@ -39,27 +39,27 @@ const Footer = () => {
         {/* Contact Us */}
         <div>
           <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5">Contact Us</h2>
-          <iframe
+          {/* <iframe
             className="rounded-lg w-full aspect-video mb-4"
             src={googleMapsEmbedUrl}
             allowFullScreen
             loading="lazy"
             title="Itorix Infotech Location"
-          ></iframe>
+          ></iframe> */}
           <p className="flex items-center gap-2 mb-2 text-sm sm:text-base">
             <FaPhoneAlt className="text-purple-500 w-4 h-4 sm:w-5 sm:h-5" />
             <a href="tel:+919579335001" className="hover:text-blue-400 transition-colors">
-              +91 9579335001
+              +91 9654746691
             </a>{" "}
-            /{" "}
-            <a href="tel:+919096456355" className="hover:text-blue-400 transition-colors">
+            {/* /{" "} */}
+            {/* <a href="tel:+919096456355" className="hover:text-blue-400 transition-colors">
               9096456355
-            </a>
+            </a> */}
           </p>
           <p className="flex items-center gap-2 text-sm sm:text-base">
             <MdEmail className="text-purple-500 w-4 h-4 sm:w-5 sm:h-5" />
             <a href="mailto:info@itorixinfotech.com" className="hover:text-blue-400 transition-colors">
-              info@itorixinfotech.com
+              info@kaaftek.com
             </a>
           </p>
         </div>
@@ -122,7 +122,7 @@ const Footer = () => {
         <div className="flex gap-3 order-1 md:order-2">
           {[
             { href: "https://www.facebook.com/Itorixinfotech/", icon: <FaFacebookF /> },
-            { href: "https://www.instagram.com/itorixinfotech/", icon: <FaInstagram /> },
+            { href: "https://www.instagram.com/kaaftek", icon: <FaInstagram /> },
             { href: "https://www.linkedin.com/company/itorixinfotech/", icon: <FaLinkedinIn /> },
           ].map((social, i) => (
             <a

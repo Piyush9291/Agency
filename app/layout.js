@@ -75,6 +75,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${playfairDisplay.variable} ${inter.variable} ${poppins.variable} ${alternativeFont.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         <Navbar/>
         {children}
