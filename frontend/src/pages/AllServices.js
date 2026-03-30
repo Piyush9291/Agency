@@ -106,7 +106,7 @@ export default function AllServices() {
   return (
     <>
       <SEO 
-        title="All Digital Marketing Services - SEO, Google Ads, Social Media | Aether Digital"
+        title="All Digital Marketing Services - SEO, Google Ads, Social Media | Kaaftek"
         description="Complete digital marketing services including SEO, Google Ads, Social Media Marketing, Content Marketing, Email Marketing, and Branding. Expert strategies for business growth."
         keywords="SEO services, Google Ads management, social media marketing, content marketing, email marketing, branding services, digital marketing agency, PPC advertising"
         url="https://agency-hub-167.preview.emergentagent.com/all-services"

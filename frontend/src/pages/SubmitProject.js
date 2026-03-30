@@ -91,7 +91,7 @@ export default function SubmitProject() {
   return (
     <>
       <SEO 
-        title="Submit Your Project - Get Free Quote | Aether Digital"
+        title="Submit Your Project - Get Free Quote | Kaaftek"
         description="Start your digital transformation journey. Submit your project details and get a personalized quote within 24 hours. Free consultation available."
         keywords="submit project, get quote, free consultation, project inquiry, start project, digital services quote"
         url="https://agency-hub-167.preview.emergentagent.com/submit-project"

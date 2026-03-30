@@ -38,13 +38,18 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3" data-testid="logo-link">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl font-syne">A</span>
+          <Link to="/" className="flex items-center space-x-3 group" data-testid="logo-link">
+            {/* Logo with K letter */}
+            <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <span className="text-white font-bold text-2xl font-syne">K</span>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
-            <span className="text-2xl font-bold font-syne tracking-tight text-gray-900">
-              Aether <span className="text-indigo-600">Digital</span>
-            </span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold font-syne tracking-tight text-gray-900 leading-none">
+                Kaaftek
+              </span>
+              <span className="text-xs text-indigo-600 font-jakarta font-medium tracking-wider">DIGITAL SOLUTIONS</span>
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">

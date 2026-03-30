@@ -68,7 +68,7 @@ export default function Pricing() {
   return (
     <>
       <SEO 
-        title="Pricing Plans - Affordable Digital Services | Aether Digital"
+        title="Pricing Plans - Affordable Digital Services | Kaaftek"
         description="Transparent pricing for web development and digital marketing services. Starter $2,999, Professional $7,999, Enterprise custom. No hidden fees. Free consultation."
         keywords="web development pricing, digital marketing cost, SEO pricing, web design packages, affordable digital services"
         url="https://agency-hub-167.preview.emergentagent.com/pricing"

@@ -1,6 +1,6 @@
 {
-  "short_name": "Aether Digital",
-  "name": "Aether Digital - Premium Digital Agency",
+  "short_name": "Kaaftek",
+  "name": "Kaaftek - Premium Digital Solutions",
   "description": "Transform your business with expert web development, digital marketing, SEO, and branding services",
   "icons": [
     {
@@ -11,6 +11,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0f172a",
-  "background_color": "#020617"
+  "theme_color": "#4f46e5",
+  "background_color": "#ffffff"
 }

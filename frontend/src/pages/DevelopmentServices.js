@@ -94,7 +94,7 @@ export default function DevelopmentServices() {
   return (
     <>
       <SEO 
-        title="Web Development Services - Custom Websites & E-commerce | Aether Digital"
+        title="Web Development Services - Custom Websites & E-commerce | Kaaftek"
         description="Expert web development services including Website Design, E-commerce, Shopify Development, Custom Software, and Website Maintenance. Modern, scalable solutions."
         keywords="website development, web design, e-commerce website, shopify development, custom software, website maintenance, web development services"
         url="https://agency-hub-167.preview.emergentagent.com/development"

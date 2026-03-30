@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      content: "hello@aetherdigital.com",
-      link: "mailto:hello@aetherdigital.com"
+      content: "hello@kaaftek.com",
+      link: "mailto:hello@kaaftek.com"
     },
     {
       icon: Phone,
@@ -61,8 +61,8 @@ export default function Contact() {
   return (
     <>
       <SEO 
-        title="Contact Us - Get in Touch | Aether Digital"
-        description="Contact Aether Digital for web development, digital marketing, and branding services. Available 24/7. Email: hello@aetherdigital.com | Phone: +1-555-123-4567"
+        title="Contact Us - Get in Touch | Kaaftek"
+        description="Contact Kaaftek for web development, digital marketing, and branding services. Available 24/7. Email: hello@kaaftek.com | Phone: +1-555-123-4567"
         keywords="contact digital agency, get quote, web development inquiry, marketing consultation, project inquiry"
         url="https://agency-hub-167.preview.emergentagent.com/contact"
       />

@@ -154,7 +154,7 @@ export default function BestServices() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold font-syne tracking-tight mb-6">
-              Why Choose Aether Digital?
+              Why Choose Kaaftek?
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8">

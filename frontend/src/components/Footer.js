@@ -36,12 +36,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl font-syne">A</span>
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-2xl font-syne">K</span>
               </div>
-              <span className="text-2xl font-bold font-syne tracking-tight text-gray-900">
-                Aether <span className="text-indigo-600">Digital</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold font-syne tracking-tight text-gray-900 leading-none">
+                  Kaaftek
+                </span>
+                <span className="text-xs text-indigo-600 font-jakarta font-medium tracking-wider">DIGITAL SOLUTIONS</span>
+              </div>
             </div>
             <p className="text-gray-600 font-jakarta text-sm leading-relaxed mb-6">
               Constructing digital realities with engineering precision and artistic chaos.
@@ -114,7 +117,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-500 font-jakarta text-sm">
-              © {new Date().getFullYear()} Aether Digital. All rights reserved.
+              © {new Date().getFullYear()} Kaaftek. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link

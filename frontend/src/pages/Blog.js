@@ -75,7 +75,7 @@ export default function Blog() {
   return (
     <>
       <SEO 
-        title="Blog - Digital Marketing Insights & Tips | Aether Digital"
+        title="Blog - Digital Marketing Insights & Tips | Kaaftek"
         description="Latest insights on web development, digital marketing, SEO, and design trends. Expert tips and strategies to grow your business online."
         keywords="digital marketing blog, web development tips, SEO guide, design trends, marketing strategies, tech insights"
         url="https://agency-hub-167.preview.emergentagent.com/blog"

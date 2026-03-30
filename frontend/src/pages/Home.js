@@ -32,7 +32,7 @@ export default function Home() {
     {
       name: "Sarah Johnson",
       role: "CEO, TechStart Inc",
-      content: "Aether Digital transformed our online presence. Our revenue increased by 300% in just 6 months!",
+      content: "Kaaftek transformed our online presence. Our revenue increased by 300% in just 6 months!",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
     },
     {
@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Aether Digital - Premium Digital Agency Services | Web Development & Marketing"
+        title="Kaaftek - Premium Digital Agency Services | Web Development & Marketing"
         description="Transform your business with expert web development, digital marketing, SEO, and branding services. 500+ successful projects delivered with 98% success rate."
         keywords="digital agency, web development, mobile app development, digital marketing, SEO services, social media marketing, branding, UI/UX design, Google Ads, content marketing"
         url="https://agency-hub-167.preview.emergentagent.com"

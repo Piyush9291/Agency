@@ -29,8 +29,8 @@ export default function About() {
   return (
     <>
       <SEO 
-        title="About Us - Our Story & Team | Aether Digital"
-        description="Learn about Aether Digital - a passionate team transforming businesses since 2018. 500+ projects completed, 250+ happy clients, 98% success rate."
+        title="About Us - Our Story & Team | Kaaftek"
+        description="Learn about Kaaftek - a passionate team transforming businesses since 2018. 500+ projects completed, 250+ happy clients, 98% success rate."
         keywords="about digital agency, our team, company history, mission vision, digital transformation experts"
         url="https://agency-hub-167.preview.emergentagent.com/about"
       />
@@ -55,7 +55,7 @@ export default function About() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
-              Aether Digital is a team of passionate creators, developers, and strategists dedicated to transforming businesses through innovative digital solutions.
+              Kaaftek is a team of passionate creators, developers, and strategists dedicated to transforming businesses through innovative digital solutions.
             </p>
           </motion.div>
         </div>
@@ -73,7 +73,7 @@ export default function About() {
           >
             <img
               src="https://images.unsplash.com/photo-1622676614630-a9109126264a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjcmVhdGl2ZSUyMGRpZ2l0YWwlMjBhZ2VuY3klMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzQyOTI5MTV8MA&ixlib=rb-4.1.0&q=85"
-              alt="Aether Digital team collaboration"
+              alt="Kaaftek team collaboration"
               className="w-full h-96 object-cover"
             />
           </motion.div>
@@ -92,7 +92,7 @@ export default function About() {
             <h2 className="text-3xl sm:text-4xl font-bold font-syne mb-8">Our Story</h2>
             <div className="space-y-6 text-gray-600 font-jakarta leading-relaxed text-lg">
               <p>
-                Founded in 2018, Aether Digital began with a simple mission: to help businesses thrive in the digital age. What started as a small team of three has grown into a full-service digital agency serving clients worldwide.
+                Founded in 2018, Kaaftek began with a simple mission: to help businesses thrive in the digital age. What started as a small team of three has grown into a full-service digital agency serving clients worldwide.
               </p>
               <p>
                 We blend engineering precision with artistic chaos to create digital experiences that don't just look good—they perform. Our approach is rooted in understanding your business goals and translating them into effective digital strategies.
@@ -156,7 +156,7 @@ export default function About() {
             >
               <img
                 src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="CEO of Aether Digital"
+                alt="CEO of Kaaftek"
                 className="w-full rounded-3xl border border-gray-200"
               />
             </motion.div>
@@ -173,7 +173,7 @@ export default function About() {
                 Building the Future Together
               </h2>
               <p className="text-gray-600 font-jakarta leading-relaxed text-lg mb-6">
-                "At Aether Digital, we believe that every business deserves a digital presence that truly represents their vision and drives results. Our commitment is to deliver not just services, but partnerships that fuel growth and innovation."
+                "At Kaaftek, we believe that every business deserves a digital presence that truly represents their vision and drives results. Our commitment is to deliver not just services, but partnerships that fuel growth and innovation."
               </p>
               <p className="text-gray-600 font-jakarta leading-relaxed text-lg mb-6">
                 "Thank you for trusting us with your digital journey. We're excited to help you achieve extraordinary success."

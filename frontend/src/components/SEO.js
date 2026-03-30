@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
 export const SEO = ({
-  title = "Aether Digital - Premium Digital Agency Services",
+  title = "Kaaftek - Premium Digital Solutions & Services",
   description = "Transform your business with expert web development, digital marketing, SEO, and branding services. 500+ successful projects delivered.",
   keywords = "digital agency, web development, digital marketing, SEO, social media marketing, branding, Google Ads, content marketing, email marketing",
   ogImage = "https://images.unsplash.com/photo-1746796451196-5225bdcf3955?w=1200&h=630&fit=crop",
   url = "https://agency-hub-167.preview.emergentagent.com",
   type = "website",
-  author = "Aether Digital",
+  author = "Kaaftek",
   canonical
 }) => {
   const siteUrl = url;
@@ -28,7 +28,7 @@ export const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Aether Digital" />
+      <meta property="og:site_name" content="Kaaftek" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
