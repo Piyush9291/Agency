@@ -31,21 +31,19 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-slate-950 border-t border-white/10" data-testid="footer">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950 opacity-50"></div>
-      
+    <footer className="relative bg-gray-50 border-t border-gray-200" data-testid="footer">
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-xl font-syne">A</span>
               </div>
-              <span className="text-2xl font-bold font-syne tracking-tight">
-                Aether <span className="text-indigo-400">Digital</span>
+              <span className="text-2xl font-bold font-syne tracking-tight text-gray-900">
+                Aether <span className="text-indigo-600">Digital</span>
               </span>
             </div>
-            <p className="text-slate-400 font-jakarta text-sm leading-relaxed mb-6">
+            <p className="text-gray-600 font-jakarta text-sm leading-relaxed mb-6">
               Constructing digital realities with engineering precision and artistic chaos.
             </p>
             <div className="flex space-x-4">
@@ -55,23 +53,23 @@ export const Footer = () => {
                   href={social.url}
                   aria-label={social.label}
                   whileHover={{ y: -3 }}
-                  className="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center hover:border-indigo-500/50 transition-colors duration-200"
+                  className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-indigo-500 hover:text-indigo-600 transition-all duration-200 shadow-sm"
                   data-testid={`social-${social.label.toLowerCase()}`}
                 >
-                  <social.icon size={18} className="text-slate-400" />
+                  <social.icon size={18} className="text-gray-600" />
                 </motion.a>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6">Company</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-slate-400 font-jakarta text-sm hover:text-indigo-400 transition-colors duration-200"
+                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -81,13 +79,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6">Services</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-slate-400 font-jakarta text-sm hover:text-indigo-400 transition-colors duration-200"
+                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -97,13 +95,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6">Resources</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-slate-400 font-jakarta text-sm hover:text-indigo-400 transition-colors duration-200"
+                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -113,21 +111,21 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10">
+        <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <p className="text-slate-500 font-jakarta text-sm">
+            <p className="text-gray-500 font-jakarta text-sm">
               © {new Date().getFullYear()} Aether Digital. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link
                 to="#"
-                className="text-slate-500 font-jakarta text-sm hover:text-indigo-400 transition-colors duration-200"
+                className="text-gray-500 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="#"
-                className="text-slate-500 font-jakarta text-sm hover:text-indigo-400 transition-colors duration-200"
+                className="text-gray-500 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
               >
                 Terms of Service
               </Link>

@@ -66,7 +66,7 @@ export default function Contact() {
         keywords="contact digital agency, get quote, web development inquiry, marketing consultation, project inquiry"
         url="https://agency-hub-167.preview.emergentagent.com/contact"
       />
-      <div className="bg-slate-950 pt-20" data-testid="contact-page">
+      <div className="bg-gray-50 pt-20" data-testid="contact-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -82,11 +82,11 @@ export default function Contact() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-8">
               Let's Start a
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
                 Conversation
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll respond within 24 hours.
             </p>
           </motion.div>
@@ -107,7 +107,7 @@ export default function Contact() {
               {contactInfo.map((info, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-slate-900 border border-white/10"
+                  className="p-6 rounded-2xl bg-white border border-gray-200"
                   data-testid={`contact-info-${idx}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-indigo-600/20 flex items-center justify-center mb-4">
@@ -116,7 +116,7 @@ export default function Contact() {
                   <h3 className="font-syne font-bold text-lg mb-2">{info.title}</h3>
                   <a
                     href={info.link}
-                    className="text-slate-400 font-jakarta hover:text-indigo-400 transition-colors duration-200"
+                    className="text-gray-600 font-jakarta hover:text-indigo-400 transition-colors duration-200"
                   >
                     {info.content}
                   </a>
@@ -125,7 +125,7 @@ export default function Contact() {
 
               <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-600/10 to-cyan-600/10 border border-indigo-500/20">
                 <h3 className="font-syne font-bold text-lg mb-3">Business Hours</h3>
-                <div className="space-y-2 text-slate-400 font-jakarta text-sm">
+                <div className="space-y-2 text-gray-600 font-jakarta text-sm">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: 10:00 AM - 4:00 PM</p>
                   <p>Sunday: Closed</p>
@@ -140,9 +140,9 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <div className="p-8 md:p-12 rounded-3xl bg-slate-900 border border-white/10">
+              <div className="p-8 md:p-12 rounded-3xl bg-white border border-gray-200">
                 <h2 className="text-3xl font-bold font-syne mb-2">Send Us a Message</h2>
-                <p className="text-slate-400 font-jakarta mb-8">
+                <p className="text-gray-600 font-jakarta mb-8">
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
                 
@@ -159,7 +159,7 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl bg-slate-950/50 border border-white/10 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                        className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                         placeholder="John Doe"
                         data-testid="contact-name-input"
                       />
@@ -175,7 +175,7 @@ export default function Contact() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl bg-slate-950/50 border border-white/10 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                        className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                         placeholder="john@example.com"
                         data-testid="contact-email-input"
                       />
@@ -193,7 +193,7 @@ export default function Contact() {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-6 py-4 rounded-xl bg-slate-950/50 border border-white/10 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                      className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                       placeholder="How can we help you?"
                       data-testid="contact-subject-input"
                     />
@@ -210,7 +210,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows="6"
-                      className="w-full px-6 py-4 rounded-xl bg-slate-950/50 border border-white/10 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta resize-none transition-all duration-200"
+                      className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta resize-none transition-all duration-200"
                       placeholder="Tell us about your project..."
                       data-testid="contact-message-input"
                     ></textarea>

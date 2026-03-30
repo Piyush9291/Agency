@@ -73,7 +73,7 @@ export default function Pricing() {
         keywords="web development pricing, digital marketing cost, SEO pricing, web design packages, affordable digital services"
         url="https://agency-hub-167.preview.emergentagent.com/pricing"
       />
-      <div className="bg-slate-950 pt-20" data-testid="pricing-page">
+      <div className="bg-gray-50 pt-20" data-testid="pricing-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -89,11 +89,11 @@ export default function Pricing() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-8">
               Simple, Transparent
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
                 Pricing
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
               Choose the plan that fits your needs. All plans include premium features and support.
             </p>
           </motion.div>
@@ -114,8 +114,8 @@ export default function Pricing() {
                 whileHover={{ y: -5 }}
                 className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
                   plan.popular
-                    ? "bg-slate-900 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-105"
-                    : "bg-slate-900/50 border-white/10 hover:border-indigo-500/30"
+                    ? "bg-white border-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-105"
+                    : "bg-gray-1000 border-gray-200 hover:border-indigo-500/30"
                 }`}
                 data-testid={`pricing-plan-${idx}`}
               >
@@ -128,17 +128,17 @@ export default function Pricing() {
                 )}
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold font-syne mb-2">{plan.name}</h3>
-                  <p className="text-slate-400 font-jakarta text-sm">{plan.description}</p>
+                  <p className="text-gray-600 font-jakarta text-sm">{plan.description}</p>
                 </div>
                 <div className="mb-8">
                   <div className="flex items-baseline gap-2">
                     <span className="text-5xl font-bold font-syne">{plan.price}</span>
-                    <span className="text-slate-400 font-jakarta text-sm">/ {plan.period}</span>
+                    <span className="text-gray-600 font-jakarta text-sm">/ {plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="flex items-start text-slate-300 font-jakarta">
+                    <li key={fIdx} className="flex items-start text-gray-700 font-jakarta">
                       <Check size={20} className="text-indigo-400 mr-3 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
@@ -163,7 +163,7 @@ export default function Pricing() {
       </section>
 
       {/* Add-ons Section */}
-      <section className="py-24 px-6 md:px-12 bg-slate-900/50">
+      <section className="py-24 px-6 md:px-12 bg-gray-1000">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -174,7 +174,7 @@ export default function Pricing() {
             <h2 className="text-3xl sm:text-4xl font-bold font-syne tracking-tight mb-6">
               Optional Add-ons
             </h2>
-            <p className="text-slate-400 font-jakarta text-lg">
+            <p className="text-gray-600 font-jakarta text-lg">
               Enhance your package with additional services
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex items-center justify-between p-6 rounded-2xl bg-slate-900 border border-white/10 hover:border-indigo-500/30 transition-all duration-300"
+                className="flex items-center justify-between p-6 rounded-2xl bg-white border border-gray-200 hover:border-indigo-500/30 transition-all duration-300"
                 data-testid={`addon-${idx}`}
               >
                 <span className="font-jakarta font-medium text-slate-200">{addon.name}</span>
@@ -208,7 +208,7 @@ export default function Pricing() {
             <h2 className="text-3xl sm:text-4xl font-bold font-syne tracking-tight mb-6">
               Have Questions?
             </h2>
-            <p className="text-slate-400 font-jakarta text-lg mb-10">
+            <p className="text-gray-600 font-jakarta text-lg mb-10">
               Get in touch with our team to discuss your specific needs and get a custom quote.
             </p>
             <Link to="/contact" data-testid="pricing-contact-cta">

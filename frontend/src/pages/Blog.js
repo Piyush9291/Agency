@@ -80,7 +80,7 @@ export default function Blog() {
         keywords="digital marketing blog, web development tips, SEO guide, design trends, marketing strategies, tech insights"
         url="https://agency-hub-167.preview.emergentagent.com/blog"
       />
-      <div className="bg-slate-950 pt-20" data-testid="blog-page">
+      <div className="bg-gray-50 pt-20" data-testid="blog-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -96,11 +96,11 @@ export default function Blog() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-8">
               Insights & Stories
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
                 From Our Experts
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
               Stay updated with the latest trends, tips, and insights in web development, design, and digital marketing.
             </p>
           </motion.div>
@@ -118,7 +118,7 @@ export default function Blog() {
             className="group cursor-pointer"
             data-testid="featured-post"
           >
-            <div className="grid md:grid-cols-2 gap-8 rounded-3xl overflow-hidden bg-slate-900 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
+            <div className="grid md:grid-cols-2 gap-8 rounded-3xl overflow-hidden bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300">
               <div className="h-80 md:h-auto overflow-hidden">
                 <img
                   src={featuredPost.image}
@@ -133,10 +133,10 @@ export default function Blog() {
                 <h2 className="text-3xl md:text-4xl font-bold font-syne mb-4 group-hover:text-indigo-400 transition-colors duration-300">
                   {featuredPost.title}
                 </h2>
-                <p className="text-slate-400 font-jakarta leading-relaxed mb-6">
+                <p className="text-gray-600 font-jakarta leading-relaxed mb-6">
                   {featuredPost.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-sm text-slate-500 font-jakarta mb-6">
+                <div className="flex items-center justify-between text-sm text-gray-9000 font-jakarta mb-6">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
                       <User size={16} />
@@ -173,7 +173,7 @@ export default function Blog() {
                 className={`px-6 py-3 rounded-full font-jakarta font-semibold transition-all duration-300 ${
                   idx === 0
                     ? "bg-indigo-600 text-white"
-                    : "bg-slate-900 text-slate-400 border border-white/10 hover:border-indigo-500/50 hover:text-white"
+                    : "bg-white text-gray-600 border border-gray-200 hover:border-indigo-500/50 hover:text-white"
                 }`}
                 data-testid={`category-${idx}`}
               >
@@ -199,7 +199,7 @@ export default function Blog() {
                 className="group cursor-pointer"
                 data-testid={`blog-post-${idx}`}
               >
-                <div className="rounded-2xl overflow-hidden bg-slate-900 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 h-full flex flex-col">
+                <div className="rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300 h-full flex flex-col">
                   <div className="h-48 bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 flex items-center justify-center">
                     <post.icon size={48} className="text-indigo-400 opacity-50" />
                   </div>
@@ -210,15 +210,15 @@ export default function Blog() {
                     <h3 className="text-xl font-bold font-syne mb-3 group-hover:text-indigo-400 transition-colors duration-300">
                       {post.title}
                     </h3>
-                    <p className="text-slate-400 font-jakarta text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 font-jakarta text-sm mb-4 flex-grow">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-slate-500 font-jakarta mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-9000 font-jakarta mb-4">
                       <span>{post.author}</span>
                       <span>{post.readTime}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500 text-xs font-jakarta">{post.date}</span>
+                      <span className="text-gray-9000 text-xs font-jakarta">{post.date}</span>
                       <ArrowRight size={16} className="text-indigo-400 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 px-6 md:px-12 bg-slate-900/50">
+      <section className="py-24 px-6 md:px-12 bg-gray-1000">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -240,14 +240,14 @@ export default function Blog() {
             <h2 className="text-3xl sm:text-4xl font-bold font-syne tracking-tight mb-6">
               Subscribe to Our Newsletter
             </h2>
-            <p className="text-slate-400 font-jakarta text-lg mb-8">
+            <p className="text-gray-600 font-jakarta text-lg mb-8">
               Get the latest insights delivered straight to your inbox every week.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-6 py-4 rounded-full bg-slate-950 border border-white/10 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta"
+                className="flex-grow px-6 py-4 rounded-full bg-gray-50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta"
                 data-testid="newsletter-email-input"
               />
               <button

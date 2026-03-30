@@ -34,7 +34,7 @@ export default function About() {
         keywords="about digital agency, our team, company history, mission vision, digital transformation experts"
         url="https://agency-hub-167.preview.emergentagent.com/about"
       />
-      <div className="bg-slate-950 pt-20" data-testid="about-page">
+      <div className="bg-gray-50 pt-20" data-testid="about-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -50,11 +50,11 @@ export default function About() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-8">
               We Construct Digital
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
                 Realities
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
               Aether Digital is a team of passionate creators, developers, and strategists dedicated to transforming businesses through innovative digital solutions.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl overflow-hidden border border-white/10"
+            className="rounded-3xl overflow-hidden border border-gray-200"
           >
             <img
               src="https://images.unsplash.com/photo-1622676614630-a9109126264a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjcmVhdGl2ZSUyMGRpZ2l0YWwlMjBhZ2VuY3klMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzQyOTI5MTV8MA&ixlib=rb-4.1.0&q=85"
@@ -81,7 +81,7 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 px-6 md:px-12 bg-slate-900/50">
+      <section className="py-24 px-6 md:px-12 bg-gray-1000">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -90,7 +90,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold font-syne mb-8">Our Story</h2>
-            <div className="space-y-6 text-slate-400 font-jakarta leading-relaxed text-lg">
+            <div className="space-y-6 text-gray-600 font-jakarta leading-relaxed text-lg">
               <p>
                 Founded in 2018, Aether Digital began with a simple mission: to help businesses thrive in the digital age. What started as a small team of three has grown into a full-service digital agency serving clients worldwide.
               </p>
@@ -117,7 +117,7 @@ export default function About() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-syne tracking-tight mb-6">
               Our Values
             </h2>
-            <p className="text-slate-400 font-jakarta text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 font-jakarta text-lg max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -130,14 +130,14 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-900 border border-white/10 hover:border-indigo-500/50 transition-all duration-300"
+                className="p-8 rounded-3xl bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300"
                 data-testid={`value-${idx}`}
               >
                 <div className="w-14 h-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center mb-6">
                   <value.icon size={28} className="text-indigo-400" />
                 </div>
                 <h3 className="text-2xl font-bold font-syne mb-4">{value.title}</h3>
-                <p className="text-slate-400 font-jakarta leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 font-jakarta leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -145,7 +145,7 @@ export default function About() {
       </section>
 
       {/* CEO Message */}
-      <section className="py-24 px-6 md:px-12 bg-slate-900/50">
+      <section className="py-24 px-6 md:px-12 bg-gray-1000">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -157,7 +157,7 @@ export default function About() {
               <img
                 src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 alt="CEO of Aether Digital"
-                className="w-full rounded-3xl border border-white/10"
+                className="w-full rounded-3xl border border-gray-200"
               />
             </motion.div>
             <motion.div
@@ -172,15 +172,15 @@ export default function About() {
               <h2 className="text-3xl sm:text-4xl font-bold font-syne mb-6">
                 Building the Future Together
               </h2>
-              <p className="text-slate-400 font-jakarta leading-relaxed text-lg mb-6">
+              <p className="text-gray-600 font-jakarta leading-relaxed text-lg mb-6">
                 "At Aether Digital, we believe that every business deserves a digital presence that truly represents their vision and drives results. Our commitment is to deliver not just services, but partnerships that fuel growth and innovation."
               </p>
-              <p className="text-slate-400 font-jakarta leading-relaxed text-lg mb-6">
+              <p className="text-gray-600 font-jakarta leading-relaxed text-lg mb-6">
                 "Thank you for trusting us with your digital journey. We're excited to help you achieve extraordinary success."
               </p>
               <div>
                 <p className="font-bold font-syne text-xl">Alexandra Bennett</p>
-                <p className="text-slate-400 font-jakarta">CEO & Founder</p>
+                <p className="text-gray-600 font-jakarta">CEO & Founder</p>
               </div>
             </motion.div>
           </div>

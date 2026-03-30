@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <main>
         <Outlet />

@@ -43,7 +43,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="bg-slate-950 pt-20 min-h-screen" data-testid="dashboard-page">
+    <div className="bg-gray-50 pt-20 min-h-screen" data-testid="dashboard-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -59,11 +59,11 @@ export default function Dashboard() {
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-4">
                   Project
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
                     {" "}Dashboard
                   </span>
                 </h1>
-                <p className="text-lg text-slate-400 font-jakarta">
+                <p className="text-lg text-gray-600 font-jakarta">
                   Track and manage all your submitted projects in one place.
                 </p>
               </div>
@@ -87,11 +87,11 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-6 rounded-2xl bg-slate-900 border border-white/10"
+              className="p-6 rounded-2xl bg-white border border-gray-200"
               data-testid="stats-total-projects"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-slate-400 font-jakarta text-sm">Total Projects</span>
+                <span className="text-gray-600 font-jakarta text-sm">Total Projects</span>
                 <Folder size={20} className="text-indigo-400" />
               </div>
               <p className="text-4xl font-bold font-syne text-white">{projects.length}</p>
@@ -101,11 +101,11 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-6 rounded-2xl bg-slate-900 border border-white/10"
+              className="p-6 rounded-2xl bg-white border border-gray-200"
               data-testid="stats-in-progress"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-slate-400 font-jakarta text-sm">In Progress</span>
+                <span className="text-gray-600 font-jakarta text-sm">In Progress</span>
                 <Clock size={20} className="text-cyan-400" />
               </div>
               <p className="text-4xl font-bold font-syne text-white">{Math.floor(projects.length * 0.6)}</p>
@@ -115,11 +115,11 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="p-6 rounded-2xl bg-slate-900 border border-white/10"
+              className="p-6 rounded-2xl bg-white border border-gray-200"
               data-testid="stats-completed"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-slate-400 font-jakarta text-sm">Completed</span>
+                <span className="text-gray-600 font-jakarta text-sm">Completed</span>
                 <DollarSign size={20} className="text-green-400" />
               </div>
               <p className="text-4xl font-bold font-syne text-white">{Math.floor(projects.length * 0.4)}</p>
@@ -138,11 +138,11 @@ export default function Dashboard() {
               className="text-center py-24"
               data-testid="no-projects-message"
             >
-              <div className="w-20 h-20 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 rounded-full bg-white border border-gray-200 flex items-center justify-center mx-auto mb-6">
                 <AlertCircle size={40} className="text-slate-600" />
               </div>
               <h3 className="text-2xl font-bold font-syne mb-4">No Projects Yet</h3>
-              <p className="text-slate-400 font-jakarta mb-8">
+              <p className="text-gray-600 font-jakarta mb-8">
                 You haven't submitted any projects. Start your first project now!
               </p>
               <Link to="/submit-project">
@@ -160,7 +160,7 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   whileHover={{ y: -3 }}
-                  className="group p-6 md:p-8 rounded-3xl bg-slate-900 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
+                  className="group p-6 md:p-8 rounded-3xl bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
                   data-testid={`project-card-${idx}`}
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -173,22 +173,22 @@ export default function Dashboard() {
                           <h3 className="text-xl font-bold font-syne group-hover:text-indigo-400 transition-colors duration-300">
                             {project.project_type}
                           </h3>
-                          <p className="text-slate-500 font-jakarta text-sm">
+                          <p className="text-gray-9000 font-jakarta text-sm">
                             Submitted on {formatDate(project.timestamp)}
                           </p>
                         </div>
                       </div>
-                      <p className="text-slate-400 font-jakarta leading-relaxed mb-4">
+                      <p className="text-gray-600 font-jakarta leading-relaxed mb-4">
                         {project.description.length > 150
                           ? `${project.description.substring(0, 150)}...`
                           : project.description}
                       </p>
                       <div className="flex flex-wrap gap-4 text-sm">
-                        <div className="flex items-center gap-2 text-slate-500 font-jakarta">
+                        <div className="flex items-center gap-2 text-gray-9000 font-jakarta">
                           <Mail size={16} />
                           <span>{project.email}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-slate-500 font-jakarta">
+                        <div className="flex items-center gap-2 text-gray-9000 font-jakarta">
                           <DollarSign size={16} />
                           <span>{project.budget}</span>
                         </div>
