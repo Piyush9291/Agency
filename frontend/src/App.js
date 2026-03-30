@@ -5,6 +5,7 @@ import About from "./pages/About";
 import DevelopmentServices from "./pages/DevelopmentServices";
 import MarketingServices from "./pages/MarketingServices";
 import BestServices from "./pages/BestServices";
+import AllServices from "./pages/AllServices";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -24,6 +25,7 @@ function App() {
             <Route path="development" element={<DevelopmentServices />} />
             <Route path="marketing" element={<MarketingServices />} />
             <Route path="best-services" element={<BestServices />} />
+            <Route path="all-services" element={<AllServices />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="blog" element={<Blog />} />
             <Route path="contact" element={<Contact />} />
