@@ -78,16 +78,14 @@ export default function Home() {
         keywords="digital agency, web development, mobile app development, digital marketing, SEO services, social media marketing, branding, UI/UX design, Google Ads, content marketing"
         url="https://agency-hub-167.preview.emergentagent.com"
       />
-      <div className="bg-gray-50" data-testid="home-page">
+      <div className="bg-white" data-testid="home-page">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-indigo-50 via-white to-white opacity-50"></div>
-          <img
-            src="https://images.unsplash.com/photo-1746796451196-5225bdcf3955?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwYWJzdHJhY3QlMjB0ZWNobm9sb2d5JTIwZGF0YSUyMGZsb3clMjBiYWNrZ3JvdW5kJTIwM2QlMjBnbGFzc21vcnBoaXNtfGVufDB8fHx8MTc3NDI5MjkxNnww&ixlib=rb-4.1.0&q=85"
-            alt="Abstract technology background"
-            className="w-full h-full object-cover opacity-20"
-          />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-50" data-testid="hero-section">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center py-32">
@@ -102,12 +100,12 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="inline-block mb-6"
             >
-              <span className="px-6 py-2 rounded-full bg-indigo-600/20 border border-indigo-500/50 text-indigo-300 font-jakarta text-sm font-semibold tracking-wide">
+              <span className="px-6 py-2 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-700 font-jakarta text-sm font-semibold tracking-wide">
                 🚀 DIGITAL TRANSFORMATION EXPERTS
               </span>
             </motion.div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-syne tracking-tight mb-8 leading-tight" data-testid="hero-headline">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-syne tracking-tight mb-8 leading-tight text-gray-900" data-testid="hero-headline">
               Grow Your Business with
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
@@ -125,7 +123,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 bg-white text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 flex items-center gap-3"
+                  className="rounded-full px-10 py-5 bg-indigo-600 text-white font-bold font-jakarta text-lg shadow-xl hover:shadow-2xl hover:bg-indigo-700 transition-all duration-300 flex items-center gap-3"
                 >
                   Submit Your Project
                   <ArrowRight size={20} />
@@ -135,7 +133,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 border-2 border-white/20 hover:bg-white/10 transition-colors duration-200 font-bold font-jakarta text-lg"
+                  className="rounded-full px-10 py-5 border-2 border-indigo-200 bg-white hover:bg-gray-50 transition-colors duration-200 font-bold font-jakarta text-lg text-gray-900"
                 >
                   Explore Services
                 </motion.button>
