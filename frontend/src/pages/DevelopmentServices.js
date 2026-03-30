@@ -1,57 +1,105 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Code, Smartphone, Layout, Database, ArrowRight } from "lucide-react";
+import { Code, Smartphone, Layout, Database, ArrowRight, ShoppingCart } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function DevelopmentServices() {
   const services = [
     {
-      icon: Code,
-      title: "Web Development",
-      description: "Custom websites built with modern technologies like React, Next.js, and Node.js",
+      icon: Layout,
+      title: "Website Designing",
+      description: "Beautiful, modern website designs that captivate your audience",
       features: [
-        "Responsive design",
-        "SEO optimization",
-        "Fast loading times",
-        "Security best practices"
-      ]
+        "Custom UI/UX Design",
+        "Responsive Layouts",
+        "Brand Identity Integration",
+        "Figma/Adobe XD Prototypes",
+        "Mobile-First Approach",
+        "Conversion-Focused Design"
+      ],
+      color: "indigo"
+    },
+    {
+      icon: Code,
+      title: "Website Development",
+      description: "Full-stack web development with cutting-edge technologies",
+      features: [
+        "React/Next.js Development",
+        "Node.js Backend",
+        "MongoDB/PostgreSQL",
+        "RESTful API Integration",
+        "Cloud Deployment (AWS/Vercel)",
+        "Performance Optimization"
+      ],
+      color: "cyan"
     },
     {
       icon: Smartphone,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android",
+      title: "E-commerce Website",
+      description: "Complete online store solutions to sell your products globally",
       features: [
-        "React Native development",
-        "Native iOS/Android",
-        "App store deployment",
-        "Push notifications"
-      ]
-    },
-    {
-      icon: Layout,
-      title: "Admin Panels",
-      description: "Powerful admin dashboards for managing your business operations",
-      features: [
-        "User management",
-        "Analytics dashboard",
-        "Real-time updates",
-        "Custom workflows"
-      ]
+        "Shopping Cart System",
+        "Payment Gateway Integration",
+        "Inventory Management",
+        "Order Tracking",
+        "Product Search & Filters",
+        "Customer Reviews & Ratings"
+      ],
+      color: "violet"
     },
     {
       icon: Database,
-      title: "Backend Systems",
-      description: "Scalable backend architecture and API development",
+      title: "Shopify Development",
+      description: "Custom Shopify stores with unique themes and functionality",
       features: [
-        "RESTful APIs",
-        "Database design",
-        "Cloud deployment",
-        "Performance optimization"
-      ]
+        "Custom Theme Development",
+        "App Integration",
+        "Payment Setup",
+        "SEO Optimization",
+        "Migration from Other Platforms",
+        "Ongoing Support"
+      ],
+      color: "green"
+    },
+    {
+      icon: Code,
+      title: "Custom Software",
+      description: "Tailored software solutions for your unique business needs",
+      features: [
+        "CRM/ERP Systems",
+        "Business Automation",
+        "API Development",
+        "Third-party Integrations",
+        "Scalable Architecture",
+        "Maintenance & Support"
+      ],
+      color: "pink"
+    },
+    {
+      icon: Layout,
+      title: "Website Maintenance",
+      description: "Keep your website secure, updated, and performing at its best",
+      features: [
+        "Regular Updates & Backups",
+        "Security Monitoring",
+        "Bug Fixes & Patches",
+        "Performance Optimization",
+        "Content Updates",
+        "24/7 Technical Support"
+      ],
+      color: "orange"
     },
   ];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="development-services-page">
+    <>
+      <SEO 
+        title="Web Development Services - Custom Websites & E-commerce | Aether Digital"
+        description="Expert web development services including Website Design, E-commerce, Shopify Development, Custom Software, and Website Maintenance. Modern, scalable solutions."
+        keywords="website development, web design, e-commerce website, shopify development, custom software, website maintenance, web development services"
+        url="https://agency-hub-167.preview.emergentagent.com/development"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="development-services-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -65,14 +113,14 @@ export default function DevelopmentServices() {
               DEVELOPMENT SERVICES
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-syne tracking-tight mb-8">
-              Build Powerful
+              Web & Development
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
-                Digital Solutions
+                Services
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
-              From websites to mobile apps, we create scalable, high-performance solutions tailored to your business needs.
+              From stunning websites to powerful e-commerce platforms and custom software solutions - we build digital experiences that drive results.
             </p>
           </motion.div>
 
@@ -94,7 +142,7 @@ export default function DevelopmentServices() {
       {/* Services Grid */}
       <section className="pb-24 md:pb-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
@@ -159,5 +207,6 @@ export default function DevelopmentServices() {
         </div>
       </section>
     </div>
+    </>
   );
 }
