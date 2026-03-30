@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight, Rocket, Code, TrendingUp, Palette, Megaphone, Lightbulb } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function Blog() {
   const featuredPost = {
@@ -72,7 +73,14 @@ export default function Blog() {
   const categories = ["All", "Development", "Design", "Marketing", "Business"];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="blog-page">
+    <>
+      <SEO 
+        title="Blog - Digital Marketing Insights & Tips | Aether Digital"
+        description="Latest insights on web development, digital marketing, SEO, and design trends. Expert tips and strategies to grow your business online."
+        keywords="digital marketing blog, web development tips, SEO guide, design trends, marketing strategies, tech insights"
+        url="https://agency-hub-167.preview.emergentagent.com/blog"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="blog-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -253,5 +261,6 @@ export default function Blog() {
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Target, Award, Heart } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function About() {
   const values = [
@@ -26,7 +27,14 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="about-page">
+    <>
+      <SEO 
+        title="About Us - Our Story & Team | Aether Digital"
+        description="Learn about Aether Digital - a passionate team transforming businesses since 2018. 500+ projects completed, 250+ happy clients, 98% success rate."
+        keywords="about digital agency, our team, company history, mission vision, digital transformation experts"
+        url="https://agency-hub-167.preview.emergentagent.com/about"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="about-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -179,5 +187,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

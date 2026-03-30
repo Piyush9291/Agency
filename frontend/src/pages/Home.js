@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, TrendingUp, Users, Award, CheckCircle, Rocket } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function Home() {
   const services = [
@@ -70,7 +71,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-slate-950" data-testid="home-page">
+    <>
+      <SEO 
+        title="Aether Digital - Premium Digital Agency Services | Web Development & Marketing"
+        description="Transform your business with expert web development, digital marketing, SEO, and branding services. 500+ successful projects delivered with 98% success rate."
+        keywords="digital agency, web development, mobile app development, digital marketing, SEO services, social media marketing, branding, UI/UX design, Google Ads, content marketing"
+        url="https://agency-hub-167.preview.emergentagent.com"
+      />
+      <div className="bg-slate-950" data-testid="home-page">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
         <div className="absolute inset-0">
@@ -355,5 +363,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

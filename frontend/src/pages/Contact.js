@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import SEO from "../components/SEO";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -58,7 +59,14 @@ export default function Contact() {
   ];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="contact-page">
+    <>
+      <SEO 
+        title="Contact Us - Get in Touch | Aether Digital"
+        description="Contact Aether Digital for web development, digital marketing, and branding services. Available 24/7. Email: hello@aetherdigital.com | Phone: +1-555-123-4567"
+        keywords="contact digital agency, get quote, web development inquiry, marketing consultation, project inquiry"
+        url="https://agency-hub-167.preview.emergentagent.com/contact"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="contact-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -224,5 +232,6 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }

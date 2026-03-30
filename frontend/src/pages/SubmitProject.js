@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
 import { Send, CheckCircle } from "lucide-react";
+import SEO from "../components/SEO";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -88,7 +89,14 @@ export default function SubmitProject() {
   }
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="submit-project-page">
+    <>
+      <SEO 
+        title="Submit Your Project - Get Free Quote | Aether Digital"
+        description="Start your digital transformation journey. Submit your project details and get a personalized quote within 24 hours. Free consultation available."
+        keywords="submit project, get quote, free consultation, project inquiry, start project, digital services quote"
+        url="https://agency-hub-167.preview.emergentagent.com/submit-project"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="submit-project-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
@@ -242,5 +250,6 @@ export default function SubmitProject() {
         </div>
       </section>
     </div>
+    </>
   );
 }

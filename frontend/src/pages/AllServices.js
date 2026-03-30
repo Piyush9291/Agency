@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Search, Target, Users, FileText, Mail, Palette, ArrowRight, CheckCircle } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function AllServices() {
   const services = [
@@ -103,7 +104,14 @@ export default function AllServices() {
   ];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="all-services-page">
+    <>
+      <SEO 
+        title="All Digital Marketing Services - SEO, Google Ads, Social Media | Aether Digital"
+        description="Complete digital marketing services including SEO, Google Ads, Social Media Marketing, Content Marketing, Email Marketing, and Branding. Expert strategies for business growth."
+        keywords="SEO services, Google Ads management, social media marketing, content marketing, email marketing, branding services, digital marketing agency, PPC advertising"
+        url="https://agency-hub-167.preview.emergentagent.com/all-services"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="all-services-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -301,5 +309,6 @@ export default function AllServices() {
         </div>
       </section>
     </div>
+    </>
   );
 }

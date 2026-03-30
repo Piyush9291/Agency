@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function Pricing() {
   const plans = [
@@ -65,7 +66,14 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="bg-slate-950 pt-20" data-testid="pricing-page">
+    <>
+      <SEO 
+        title="Pricing Plans - Affordable Digital Services | Aether Digital"
+        description="Transparent pricing for web development and digital marketing services. Starter $2,999, Professional $7,999, Enterprise custom. No hidden fees. Free consultation."
+        keywords="web development pricing, digital marketing cost, SEO pricing, web design packages, affordable digital services"
+        url="https://agency-hub-167.preview.emergentagent.com/pricing"
+      />
+      <div className="bg-slate-950 pt-20" data-testid="pricing-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -217,5 +225,6 @@ export default function Pricing() {
         </div>
       </section>
     </div>
+    </>
   );
 }
