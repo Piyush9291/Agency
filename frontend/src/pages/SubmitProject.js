@@ -66,12 +66,12 @@ export default function SubmitProject() {
 
   if (submitted) {
     return (
-      <div className="bg-gray-50 min-h-screen flex items-center justify-center px-6" data-testid="submit-project-success">
+      <div className="bg-transparent min-h-screen flex items-center justify-center px-6" data-testid="submit-project-success">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl w-full p-12 rounded-3xl bg-white border border-gray-200 text-center"
+          className="max-w-2xl w-full p-12 rounded-3xl bg-white/95 border border-purple-100/50 text-center"
         >
           <div className="w-20 h-20 rounded-full bg-green-600/20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle size={48} className="text-green-400" />
@@ -96,7 +96,7 @@ export default function SubmitProject() {
         keywords="submit project, get quote, free consultation, project inquiry, start project, digital services quote"
         url="https://agency-hub-167.preview.emergentagent.com/submit-project"
       />
-      <div className="bg-gray-50 pt-20" data-testid="submit-project-page">
+      <div className="bg-transparent pt-20" data-testid="submit-project-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
@@ -127,7 +127,7 @@ export default function SubmitProject() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="p-8 md:p-12 rounded-3xl bg-white border border-gray-200">
+            <div className="p-8 md:p-12 rounded-3xl bg-white/95 border border-purple-100/50">
               <form onSubmit={handleSubmit} className="space-y-8" data-testid="project-form">
                 {/* Name & Email */}
                 <div className="grid md:grid-cols-2 gap-6">
@@ -142,7 +142,7 @@ export default function SubmitProject() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                      className="w-full px-6 py-4 rounded-xl bg-transparent/50 border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                       placeholder="John Doe"
                       data-testid="project-name-input"
                     />
@@ -158,7 +158,7 @@ export default function SubmitProject() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                      className="w-full px-6 py-4 rounded-xl bg-transparent/50 border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                       placeholder="john@example.com"
                       data-testid="project-email-input"
                     />
@@ -176,7 +176,7 @@ export default function SubmitProject() {
                     required
                     value={formData.project_type}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                    className="w-full px-6 py-4 rounded-xl bg-transparent/50 border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                     data-testid="project-type-select"
                   >
                     <option value="">Select a project type</option>
@@ -197,7 +197,7 @@ export default function SubmitProject() {
                     required
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
+                    className="w-full px-6 py-4 rounded-xl bg-transparent/50 border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta transition-all duration-200"
                     data-testid="project-budget-select"
                   >
                     <option value="">Select your budget range</option>
@@ -219,14 +219,14 @@ export default function SubmitProject() {
                     value={formData.description}
                     onChange={handleChange}
                     rows="6"
-                    className="w-full px-6 py-4 rounded-xl bg-gray-50/50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta resize-none transition-all duration-200"
+                    className="w-full px-6 py-4 rounded-xl bg-transparent/50 border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta resize-none transition-all duration-200"
                     placeholder="Tell us about your project goals, timeline, and any specific requirements..."
                     data-testid="project-description-input"
                   ></textarea>
                 </div>
 
                 {/* Info Box */}
-                <div className="p-6 rounded-2xl bg-indigo-600/10 border border-indigo-500/20">
+                <div className="p-6 rounded-2xl bg-gradient-to-r from-purple-600 to-teal-500/10 border border-indigo-500/20">
                   <p className="text-gray-700 font-jakarta text-sm leading-relaxed">
                     <strong className="text-white">What happens next?</strong>
                     <br />
@@ -238,7 +238,7 @@ export default function SubmitProject() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full md:w-auto px-10 py-5 rounded-full bg-white text-black font-bold font-jakarta text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 mx-auto"
+                  className="w-full md:w-auto px-10 py-5 rounded-full bg-white/95 text-black font-bold font-jakarta text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 mx-auto"
                   data-testid="project-submit-button"
                 >
                   {loading ? "Submitting..." : "Submit Project"}

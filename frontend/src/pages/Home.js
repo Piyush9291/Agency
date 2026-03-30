@@ -78,7 +78,7 @@ export default function Home() {
         keywords="digital agency, web development, mobile app development, digital marketing, SEO services, social media marketing, branding, UI/UX design, Google Ads, content marketing"
         url="https://agency-hub-167.preview.emergentagent.com"
       />
-      <div className="bg-white" data-testid="home-page">
+      <div className="bg-white/95" data-testid="home-page">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-50" data-testid="hero-section">
         {/* Decorative Background Elements */}
@@ -123,7 +123,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 bg-indigo-600 text-white font-bold font-jakarta text-lg shadow-xl hover:shadow-2xl hover:bg-indigo-700 transition-all duration-300 flex items-center gap-3"
+                  className="rounded-full px-10 py-5 bg-gradient-to-r from-purple-600 to-teal-500 text-white font-bold font-jakarta text-lg shadow-xl hover:shadow-2xl hover:bg-indigo-700 transition-all duration-300 flex items-center gap-3"
                 >
                   Submit Your Project
                   <ArrowRight size={20} />
@@ -133,7 +133,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 border-2 border-indigo-200 bg-white hover:bg-gray-50 transition-colors duration-200 font-bold font-jakarta text-lg text-gray-900"
+                  className="rounded-full px-10 py-5 border-2 border-indigo-200 bg-white/95 hover:bg-transparent transition-colors duration-200 font-bold font-jakarta text-lg text-gray-900"
                 >
                   Explore Services
                 </motion.button>
@@ -177,7 +177,7 @@ export default function Home() {
                 whileHover={{ y: -5 }}
               >
                 <Link to={service.link}>
-                  <div className="group relative overflow-hidden rounded-3xl bg-white border border-gray-200 p-12 hover:border-indigo-500/50 transition-all duration-300 h-full" data-testid={`service-card-${idx}`}>
+                  <div className="group relative overflow-hidden rounded-3xl bg-white/95 border border-purple-100/50 p-12 hover:border-indigo-500/50 transition-all duration-300 h-full" data-testid={`service-card-${idx}`}>
                     <div className={`absolute top-0 right-0 w-64 h-64 bg-${service.color}-600/10 rounded-full blur-3xl group-hover:bg-${service.color}-600/20 transition-all duration-500`}></div>
                     <div className="relative z-10">
                       <div className={`w-16 h-16 rounded-2xl bg-${service.color}-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000" data-testid="stats-section">
+      <section className="py-24 px-6 md:px-12 bg-purple-500" data-testid="stats-section">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
@@ -248,7 +248,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="p-8 rounded-2xl bg-gray-100 border border-white/5 backdrop-blur-sm"
+                className="p-8 rounded-2xl bg-purple-50 border border-white/5 backdrop-blur-sm"
                 data-testid={`testimonial-${idx}`}
               >
                 <div className="flex items-center mb-6">
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Blog Preview Section */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-1000" data-testid="blog-preview-section">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-purple-500" data-testid="blog-preview-section">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -305,7 +305,7 @@ export default function Home() {
                 className="group cursor-pointer"
                 data-testid={`blog-card-${idx}`}
               >
-                <div className="rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300">
+                <div className="rounded-2xl overflow-hidden bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300">
                   <div className="h-48 bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 flex items-center justify-center">
                     <Rocket size={48} className="text-indigo-400 opacity-50" />
                   </div>
@@ -339,7 +339,7 @@ export default function Home() {
             className="relative rounded-3xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-cyan-600 opacity-10"></div>
-            <div className="relative backdrop-blur-xl bg-white/70 border border-gray-200 shadow-2xl p-12 md:p-16 text-center">
+            <div className="relative backdrop-blur-xl bg-white/95/70 border border-purple-100/50 shadow-2xl p-12 md:p-16 text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-syne tracking-tight mb-6">
                 Ready to Start Your Project?
               </h2>
@@ -350,7 +350,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 bg-white text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
+                  className="rounded-full px-10 py-5 bg-white/95 text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
                 >
                   Submit Your Project Now
                   <ArrowRight size={20} />

@@ -111,7 +111,7 @@ export default function AllServices() {
         keywords="SEO services, Google Ads management, social media marketing, content marketing, email marketing, branding services, digital marketing agency, PPC advertising"
         url="https://agency-hub-167.preview.emergentagent.com/all-services"
       />
-      <div className="bg-gray-50 pt-20" data-testid="all-services-page">
+      <div className="bg-transparent pt-20" data-testid="all-services-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -160,7 +160,7 @@ export default function AllServices() {
                 <div className={`absolute -inset-1 bg-gradient-to-r from-${service.color}-600 to-${service.color}-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                 
                 {/* Card */}
-                <div className="relative h-full p-8 rounded-3xl bg-white border border-gray-200 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
+                <div className="relative h-full p-8 rounded-3xl bg-white/95 border border-purple-100/50 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
                   {/* Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-${service.color}-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon size={32} className={`text-${service.color}-400`} />
@@ -202,7 +202,7 @@ export default function AllServices() {
 
                   {/* CTA Button */}
                   <Link to="/submit-project">
-                    <button className="w-full rounded-full px-6 py-3 bg-gray-100 hover:bg-white/10 border border-gray-200 hover:border-cyan-500/50 transition-all duration-300 font-semibold font-jakarta flex items-center justify-center gap-2 group">
+                    <button className="w-full rounded-full px-6 py-3 bg-purple-50 hover:bg-white/95/10 border border-purple-100/50 hover:border-cyan-500/50 transition-all duration-300 font-semibold font-jakarta flex items-center justify-center gap-2 group">
                       Get Started
                       <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
@@ -215,7 +215,7 @@ export default function AllServices() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000">
+      <section className="py-24 px-6 md:px-12 bg-purple-500">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -255,7 +255,7 @@ export default function AllServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-white border border-gray-200 hover:border-cyan-500/30 transition-all duration-300"
+                className="text-center p-8 rounded-2xl bg-white/95 border border-purple-100/50 hover:border-cyan-500/30 transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold font-syne mb-3">{item.title}</h3>
@@ -276,7 +276,7 @@ export default function AllServices() {
             className="relative rounded-3xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-indigo-600/20"></div>
-            <div className="relative backdrop-blur-xl bg-white/70 border border-gray-200 shadow-2xl p-12 md:p-16 text-center">
+            <div className="relative backdrop-blur-xl bg-white/95/70 border border-purple-100/50 shadow-2xl p-12 md:p-16 text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-syne tracking-tight mb-6">
                 Ready to Grow Your Business?
               </h2>
@@ -288,7 +288,7 @@ export default function AllServices() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="rounded-full px-10 py-5 bg-white text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
+                    className="rounded-full px-10 py-5 bg-white/95 text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
                   >
                     Start Your Project
                     <ArrowRight size={20} />
@@ -298,7 +298,7 @@ export default function AllServices() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="rounded-full px-10 py-5 border-2 border-white/20 hover:bg-white/10 transition-colors duration-200 font-bold font-jakarta text-lg"
+                    className="rounded-full px-10 py-5 border-2 border-white/20 hover:bg-white/95/10 transition-colors duration-200 font-bold font-jakarta text-lg"
                   >
                     Talk to an Expert
                   </motion.button>

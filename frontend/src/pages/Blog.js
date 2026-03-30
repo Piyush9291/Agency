@@ -80,7 +80,7 @@ export default function Blog() {
         keywords="digital marketing blog, web development tips, SEO guide, design trends, marketing strategies, tech insights"
         url="https://agency-hub-167.preview.emergentagent.com/blog"
       />
-      <div className="bg-gray-50 pt-20" data-testid="blog-page">
+      <div className="bg-transparent pt-20" data-testid="blog-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -118,7 +118,7 @@ export default function Blog() {
             className="group cursor-pointer"
             data-testid="featured-post"
           >
-            <div className="grid md:grid-cols-2 gap-8 rounded-3xl overflow-hidden bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300">
+            <div className="grid md:grid-cols-2 gap-8 rounded-3xl overflow-hidden bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300">
               <div className="h-80 md:h-auto overflow-hidden">
                 <img
                   src={featuredPost.image}
@@ -127,7 +127,7 @@ export default function Blog() {
                 />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <span className="px-4 py-1 rounded-full bg-indigo-600/20 text-indigo-300 font-jakarta text-xs font-semibold uppercase tracking-wide inline-block w-fit mb-4">
+                <span className="px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 to-teal-500/20 text-indigo-300 font-jakarta text-xs font-semibold uppercase tracking-wide inline-block w-fit mb-4">
                   {featuredPost.category}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold font-syne mb-4 group-hover:text-indigo-400 transition-colors duration-300">
@@ -172,8 +172,8 @@ export default function Blog() {
                 whileHover={{ scale: 1.05 }}
                 className={`px-6 py-3 rounded-full font-jakarta font-semibold transition-all duration-300 ${
                   idx === 0
-                    ? "bg-indigo-600 text-white"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-indigo-500/50 hover:text-white"
+                    ? "bg-gradient-to-r from-purple-600 to-teal-500 text-white"
+                    : "bg-white/95 text-gray-600 border border-purple-100/50 hover:border-indigo-500/50 hover:text-white"
                 }`}
                 data-testid={`category-${idx}`}
               >
@@ -199,7 +199,7 @@ export default function Blog() {
                 className="group cursor-pointer"
                 data-testid={`blog-post-${idx}`}
               >
-                <div className="rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300 h-full flex flex-col">
+                <div className="rounded-2xl overflow-hidden bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300 h-full flex flex-col">
                   <div className="h-48 bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 flex items-center justify-center">
                     <post.icon size={48} className="text-indigo-400 opacity-50" />
                   </div>
@@ -230,7 +230,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000">
+      <section className="py-24 px-6 md:px-12 bg-purple-500">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -247,11 +247,11 @@ export default function Blog() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-6 py-4 rounded-full bg-gray-50 border border-gray-200 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta"
+                className="flex-grow px-6 py-4 rounded-full bg-transparent border border-purple-100/50 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 text-white font-jakarta"
                 data-testid="newsletter-email-input"
               />
               <button
-                className="px-8 py-4 rounded-full bg-white text-black font-bold font-jakarta hover:scale-105 transition-transform duration-300 whitespace-nowrap"
+                className="px-8 py-4 rounded-full bg-white/95 text-black font-bold font-jakarta hover:scale-105 transition-transform duration-300 whitespace-nowrap"
                 data-testid="newsletter-subscribe-button"
               >
                 Subscribe

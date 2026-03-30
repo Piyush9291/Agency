@@ -34,7 +34,7 @@ export default function About() {
         keywords="about digital agency, our team, company history, mission vision, digital transformation experts"
         url="https://agency-hub-167.preview.emergentagent.com/about"
       />
-      <div className="bg-gray-50 pt-20" data-testid="about-page">
+      <div className="bg-transparent pt-20" data-testid="about-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -69,7 +69,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl overflow-hidden border border-gray-200"
+            className="rounded-3xl overflow-hidden border border-purple-100/50"
           >
             <img
               src="https://images.unsplash.com/photo-1622676614630-a9109126264a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjcmVhdGl2ZSUyMGRpZ2l0YWwlMjBhZ2VuY3klMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzQyOTI5MTV8MA&ixlib=rb-4.1.0&q=85"
@@ -81,7 +81,7 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000">
+      <section className="py-24 px-6 md:px-12 bg-purple-500">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -130,10 +130,10 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300"
+                className="p-8 rounded-3xl bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300"
                 data-testid={`value-${idx}`}
               >
-                <div className="w-14 h-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-purple-600 to-teal-500/20 flex items-center justify-center mb-6">
                   <value.icon size={28} className="text-indigo-400" />
                 </div>
                 <h3 className="text-2xl font-bold font-syne mb-4">{value.title}</h3>
@@ -145,7 +145,7 @@ export default function About() {
       </section>
 
       {/* CEO Message */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000">
+      <section className="py-24 px-6 md:px-12 bg-purple-500">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -157,7 +157,7 @@ export default function About() {
               <img
                 src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 alt="CEO of Kaaftek"
-                className="w-full rounded-3xl border border-gray-200"
+                className="w-full rounded-3xl border border-purple-100/50"
               />
             </motion.div>
             <motion.div

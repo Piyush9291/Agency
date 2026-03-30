@@ -31,24 +31,25 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm"
-          : "bg-white/80 backdrop-blur-sm"
+          ? "backdrop-blur-xl bg-white/80 border-b border-amber-100 shadow-lg shadow-purple-500/5"
+          : "bg-transparent"
       }`}
       data-testid="navbar"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3 group" data-testid="logo-link">
-            {/* Logo with K letter */}
-            <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <span className="text-white font-bold text-2xl font-syne">K</span>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-teal-500 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity"></div>
+              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-purple-500 to-teal-500 flex items-center justify-center shadow-xl transform group-hover:scale-105 transition-transform duration-300">
+                <span className="text-white font-bold text-2xl font-syne">K</span>
+              </div>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold font-syne tracking-tight text-gray-900 leading-none">
+              <span className="text-2xl font-bold font-syne tracking-tight text-gray-800 leading-none">
                 Kaaftek
               </span>
-              <span className="text-xs text-indigo-600 font-jakarta font-medium tracking-wider">DIGITAL SOLUTIONS</span>
+              <span className="text-xs text-purple-600 font-jakarta font-semibold tracking-wider">DIGITAL SOLUTIONS</span>
             </div>
           </Link>
 
@@ -58,17 +59,20 @@ export const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-${link.name.toLowerCase()}`}
-                className={`font-jakarta font-medium transition-colors duration-200 hover:text-indigo-600 ${
+                className={`font-jakarta font-semibold transition-colors duration-200 relative group ${
                   location.pathname === link.path
-                    ? "text-indigo-600"
-                    : "text-gray-700"
+                    ? "text-purple-600"
+                    : "text-gray-700 hover:text-purple-600"
                 }`}
               >
                 {link.name}
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-teal-500 transform origin-left transition-transform duration-300 ${
+                  location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
               </Link>
             ))}
             <Link to="/submit-project" data-testid="nav-submit-cta">
-              <button className="rounded-full px-6 py-3 bg-indigo-600 text-white font-bold font-jakarta hover:bg-indigo-700 hover:shadow-lg transition-all duration-200">
+              <button className="rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 to-teal-500 text-white font-bold font-jakarta hover:shadow-xl hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300">
                 Submit Project
               </button>
             </Link>
@@ -76,7 +80,7 @@ export const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-900"
+            className="lg:hidden text-gray-800"
             data-testid="mobile-menu-button"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -89,7 +93,7 @@ export const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
+          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-amber-100 shadow-xl"
           data-testid="mobile-menu"
         >
           <div className="px-6 py-6 space-y-4">
@@ -98,9 +102,9 @@ export const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 font-jakarta font-medium transition-colors duration-200 ${
+                className={`block py-2 font-jakarta font-semibold transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? "text-indigo-600"
+                    ? "text-purple-600"
                     : "text-gray-700"
                 }`}
               >
@@ -108,7 +112,7 @@ export const Navbar = () => {
               </Link>
             ))}
             <Link to="/submit-project" onClick={() => setIsOpen(false)}>
-              <button className="w-full rounded-full px-6 py-3 bg-indigo-600 text-white font-bold font-jakarta mt-4 hover:bg-indigo-700 transition-colors duration-200">
+              <button className="w-full rounded-full px-6 py-3.5 bg-gradient-to-r from-purple-600 to-teal-500 text-white font-bold font-jakarta mt-4">
                 Submit Project
               </button>
             </Link>

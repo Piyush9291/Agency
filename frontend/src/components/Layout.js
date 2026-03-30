@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #fdfbf7 0%, #f8f6f3 50%, #faf8f5 100%)' }}>
       <Navbar />
       <main>
         <Outlet />

@@ -73,7 +73,7 @@ export default function Pricing() {
         keywords="web development pricing, digital marketing cost, SEO pricing, web design packages, affordable digital services"
         url="https://agency-hub-167.preview.emergentagent.com/pricing"
       />
-      <div className="bg-gray-50 pt-20" data-testid="pricing-page">
+      <div className="bg-transparent pt-20" data-testid="pricing-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -114,14 +114,14 @@ export default function Pricing() {
                 whileHover={{ y: -5 }}
                 className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
                   plan.popular
-                    ? "bg-white border-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-105"
-                    : "bg-gray-1000 border-gray-200 hover:border-indigo-500/30"
+                    ? "bg-white/95 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-105"
+                    : "bg-purple-500 border-purple-100/50 hover:border-indigo-500/30"
                 }`}
                 data-testid={`pricing-plan-${idx}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="px-6 py-2 rounded-full bg-indigo-600 text-white font-jakarta text-sm font-semibold">
+                    <span className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 text-white font-jakarta text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -148,8 +148,8 @@ export default function Pricing() {
                   <button
                     className={`w-full rounded-full px-6 py-4 font-bold font-jakarta text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
                       plan.popular
-                        ? "bg-white text-black hover:scale-105 shadow-xl"
-                        : "bg-white/10 hover:bg-white/20 border border-white/20"
+                        ? "bg-white/95 text-black hover:scale-105 shadow-xl"
+                        : "bg-white/95/10 hover:bg-white/95/20 border border-white/20"
                     }`}
                   >
                     Get Started
@@ -163,7 +163,7 @@ export default function Pricing() {
       </section>
 
       {/* Add-ons Section */}
-      <section className="py-24 px-6 md:px-12 bg-gray-1000">
+      <section className="py-24 px-6 md:px-12 bg-purple-500">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -186,7 +186,7 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex items-center justify-between p-6 rounded-2xl bg-white border border-gray-200 hover:border-indigo-500/30 transition-all duration-300"
+                className="flex items-center justify-between p-6 rounded-2xl bg-white/95 border border-purple-100/50 hover:border-indigo-500/30 transition-all duration-300"
                 data-testid={`addon-${idx}`}
               >
                 <span className="font-jakarta font-medium text-slate-200">{addon.name}</span>
@@ -215,7 +215,7 @@ export default function Pricing() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="rounded-full px-10 py-5 bg-white text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
+                className="rounded-full px-10 py-5 bg-white/95 text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
               >
                 Contact Us
                 <ArrowRight size={20} />

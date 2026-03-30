@@ -43,7 +43,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="bg-gray-50 pt-20 min-h-screen" data-testid="dashboard-page">
+    <div className="bg-transparent pt-20 min-h-screen" data-testid="dashboard-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -71,7 +71,7 @@ export default function Dashboard() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-6 md:mt-0 rounded-full px-8 py-4 bg-white text-black font-bold font-jakarta flex items-center gap-3 shadow-xl hover:shadow-white/50 transition-all duration-300"
+                  className="mt-6 md:mt-0 rounded-full px-8 py-4 bg-white/95 text-black font-bold font-jakarta flex items-center gap-3 shadow-xl hover:shadow-white/50 transition-all duration-300"
                   data-testid="new-project-button"
                 >
                   <Plus size={20} />
@@ -87,7 +87,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-6 rounded-2xl bg-white border border-gray-200"
+              className="p-6 rounded-2xl bg-white/95 border border-purple-100/50"
               data-testid="stats-total-projects"
             >
               <div className="flex items-center justify-between mb-2">
@@ -101,7 +101,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-6 rounded-2xl bg-white border border-gray-200"
+              className="p-6 rounded-2xl bg-white/95 border border-purple-100/50"
               data-testid="stats-in-progress"
             >
               <div className="flex items-center justify-between mb-2">
@@ -115,7 +115,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="p-6 rounded-2xl bg-white border border-gray-200"
+              className="p-6 rounded-2xl bg-white/95 border border-purple-100/50"
               data-testid="stats-completed"
             >
               <div className="flex items-center justify-between mb-2">
@@ -138,7 +138,7 @@ export default function Dashboard() {
               className="text-center py-24"
               data-testid="no-projects-message"
             >
-              <div className="w-20 h-20 rounded-full bg-white border border-gray-200 flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 rounded-full bg-white/95 border border-purple-100/50 flex items-center justify-center mx-auto mb-6">
                 <AlertCircle size={40} className="text-slate-600" />
               </div>
               <h3 className="text-2xl font-bold font-syne mb-4">No Projects Yet</h3>
@@ -146,7 +146,7 @@ export default function Dashboard() {
                 You haven't submitted any projects. Start your first project now!
               </p>
               <Link to="/submit-project">
-                <button className="rounded-full px-8 py-4 bg-white text-black font-bold font-jakarta hover:scale-105 transition-transform duration-300">
+                <button className="rounded-full px-8 py-4 bg-white/95 text-black font-bold font-jakarta hover:scale-105 transition-transform duration-300">
                   Submit Your First Project
                 </button>
               </Link>
@@ -160,7 +160,7 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   whileHover={{ y: -3 }}
-                  className="group p-6 md:p-8 rounded-3xl bg-white border border-gray-200 hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
+                  className="group p-6 md:p-8 rounded-3xl bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
                   data-testid={`project-card-${idx}`}
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
