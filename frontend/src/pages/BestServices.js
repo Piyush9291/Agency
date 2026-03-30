@@ -59,7 +59,7 @@ export default function BestServices() {
   ];
 
   return (
-    <div className="bg-transparent pt-20" data-testid="best-services-page">
+    <div className="bg-black/20 pt-20" data-testid="best-services-page">
       {/* Hero Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -85,7 +85,7 @@ export default function BestServices() {
                 Exceptional Results
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 font-jakarta max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-400 font-jakarta max-w-3xl mx-auto leading-relaxed">
               Our most requested services, refined through hundreds of successful projects.
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function BestServices() {
                 data-testid={`best-service-${idx}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 to-cyan-600/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
-                <div className="relative p-8 rounded-3xl bg-white/95/90 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300 backdrop-blur-sm h-full">
+                <div className="relative p-8 rounded-3xl bg-white/10 backdrop-blur-xl/90 border border-purple-500/50 hover:border-indigo-500/50 transition-all duration-300 backdrop-blur-sm h-full">
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-14 h-14 rounded-2xl bg-${service.color}-600/20 flex items-center justify-center`}>
                       <service.icon size={28} className={`text-${service.color}-400`} />
@@ -118,12 +118,12 @@ export default function BestServices() {
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold font-syne mb-4">{service.title}</h3>
-                  <p className="text-gray-600 font-jakarta leading-relaxed mb-6">
+                  <p className="text-gray-400 font-jakarta leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-center text-gray-700 font-jakarta">
+                      <li key={fIdx} className="flex items-center text-gray-300 font-jakarta">
                         <div className={`w-5 h-5 rounded-full bg-${service.color}-600/20 flex items-center justify-center mr-3 flex-shrink-0`}>
                           <div className={`w-2 h-2 rounded-full bg-${service.color}-400`}></div>
                         </div>
@@ -132,7 +132,7 @@ export default function BestServices() {
                     ))}
                   </ul>
                   <Link to="/submit-project">
-                    <button className="w-full rounded-full px-6 py-3 bg-purple-50 hover:bg-white/95/10 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300 font-semibold font-jakarta flex items-center justify-center gap-2 group">
+                    <button className="w-full rounded-full px-6 py-3 bg-purple-500/10 hover:bg-white/10 backdrop-blur-xl/10 border border-purple-500/50 hover:border-indigo-500/50 transition-all duration-300 font-semibold font-jakarta flex items-center justify-center gap-2 group">
                       Get Started
                       <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
@@ -145,7 +145,7 @@ export default function BestServices() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-24 px-6 md:px-12 bg-purple-500">
+      <section className="py-24 px-6 md:px-12 bg-purple-500/100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -172,7 +172,7 @@ export default function BestServices() {
                 className="text-center p-8"
               >
                 <h3 className="text-xl font-bold font-syne mb-3">{item.title}</h3>
-                <p className="text-gray-600 font-jakarta">{item.desc}</p>
+                <p className="text-gray-400 font-jakarta">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -188,18 +188,18 @@ export default function BestServices() {
             viewport={{ once: true }}
             className="relative rounded-3xl overflow-hidden"
           >
-            <div className="relative backdrop-blur-xl bg-white/95/70 border border-purple-100/50 shadow-2xl p-12 md:p-16 text-center">
+            <div className="relative backdrop-blur-xl bg-white/10 backdrop-blur-xl/70 border border-purple-500/50 shadow-2xl p-12 md:p-16 text-center">
               <h2 className="text-3xl sm:text-4xl font-bold font-syne tracking-tight mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-gray-600 font-jakarta text-lg mb-10 max-w-2xl mx-auto">
+              <p className="text-gray-400 font-jakarta text-lg mb-10 max-w-2xl mx-auto">
                 Submit your project and let's create something extraordinary together.
               </p>
               <Link to="/submit-project" data-testid="best-services-cta-button">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 bg-white/95 text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
+                  className="rounded-full px-10 py-5 bg-white/10 backdrop-blur-xl text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
                 >
                   Submit Your Project
                   <ArrowRight size={20} />

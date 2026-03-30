@@ -31,22 +31,22 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gray-50 border-t border-gray-200" data-testid="footer">
+    <footer className="relative bg-black/20 backdrop-blur-xl border-t border-purple-500/20" data-testid="footer">
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500 flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-purple-500/50">
                 <span className="text-white font-bold text-2xl font-syne">K</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold font-syne tracking-tight text-gray-900 leading-none">
+                <span className="text-2xl font-bold font-syne tracking-tight text-white leading-none">
                   Kaaftek
                 </span>
-                <span className="text-xs text-indigo-600 font-jakarta font-medium tracking-wider">DIGITAL SOLUTIONS</span>
+                <span className="text-xs text-purple-400 font-jakarta font-semibold tracking-wider">DIGITAL SOLUTIONS</span>
               </div>
             </div>
-            <p className="text-gray-600 font-jakarta text-sm leading-relaxed mb-6">
+            <p className="text-gray-400 font-jakarta text-sm leading-relaxed mb-6">
               Constructing digital realities with engineering precision and artistic chaos.
             </p>
             <div className="flex space-x-4">
@@ -55,24 +55,24 @@ export const Footer = () => {
                   key={idx}
                   href={social.url}
                   aria-label={social.label}
-                  whileHover={{ y: -3 }}
-                  className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-indigo-500 hover:text-indigo-600 transition-all duration-200 shadow-sm"
+                  whileHover={{ y: -3, scale: 1.05 }}
+                  className="w-10 h-10 rounded-full bg-white/5 border border-purple-500/30 flex items-center justify-center hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-200"
                   data-testid={`social-${social.label.toLowerCase()}`}
                 >
-                  <social.icon size={18} className="text-gray-600" />
+                  <social.icon size={18} className="text-gray-400 group-hover:text-purple-400" />
                 </motion.a>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Company</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-white">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
+                    className="text-gray-400 font-jakarta text-sm hover:text-purple-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -82,13 +82,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Services</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
+                    className="text-gray-400 font-jakarta text-sm hover:text-purple-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -98,13 +98,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-syne font-bold text-lg mb-6 text-gray-900">Resources</h3>
+            <h3 className="font-syne font-bold text-lg mb-6 text-white">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
+                    className="text-gray-400 font-jakarta text-sm hover:text-purple-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -114,7 +114,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200">
+        <div className="pt-8 border-t border-purple-500/20">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-500 font-jakarta text-sm">
               © {new Date().getFullYear()} Kaaftek. All rights reserved.
@@ -122,13 +122,13 @@ export const Footer = () => {
             <div className="flex space-x-6">
               <Link
                 to="#"
-                className="text-gray-500 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
+                className="text-gray-500 font-jakarta text-sm hover:text-purple-400 transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="#"
-                className="text-gray-500 font-jakarta text-sm hover:text-indigo-600 transition-colors duration-200"
+                className="text-gray-500 font-jakarta text-sm hover:text-purple-400 transition-colors duration-200"
               >
                 Terms of Service
               </Link>

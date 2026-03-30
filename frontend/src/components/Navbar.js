@@ -31,7 +31,7 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "backdrop-blur-xl bg-white/80 border-b border-amber-100 shadow-lg shadow-purple-500/5"
+          ? "backdrop-blur-2xl bg-black/40 border-b border-purple-500/20 shadow-2xl shadow-purple-500/10"
           : "bg-transparent"
       }`}
       data-testid="navbar"
@@ -40,16 +40,16 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3 group" data-testid="logo-link">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-teal-500 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity"></div>
-              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-purple-500 to-teal-500 flex items-center justify-center shadow-xl transform group-hover:scale-105 transition-transform duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-purple-500/50 transform group-hover:scale-105 transition-transform duration-300">
                 <span className="text-white font-bold text-2xl font-syne">K</span>
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold font-syne tracking-tight text-gray-800 leading-none">
+              <span className="text-2xl font-bold font-syne tracking-tight text-white leading-none">
                 Kaaftek
               </span>
-              <span className="text-xs text-purple-600 font-jakarta font-semibold tracking-wider">DIGITAL SOLUTIONS</span>
+              <span className="text-xs text-purple-400 font-jakarta font-semibold tracking-wider">DIGITAL SOLUTIONS</span>
             </div>
           </Link>
 
@@ -59,28 +59,29 @@ export const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-${link.name.toLowerCase()}`}
-                className={`font-jakarta font-semibold transition-colors duration-200 relative group ${
+                className={`font-jakarta font-semibold transition-all duration-200 relative group ${
                   location.pathname === link.path
-                    ? "text-purple-600"
-                    : "text-gray-700 hover:text-purple-600"
+                    ? "text-purple-400"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
                 {link.name}
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-teal-500 transform origin-left transition-transform duration-300 ${
+                <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 transform origin-left transition-transform duration-300 ${
                   location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
             ))}
             <Link to="/submit-project" data-testid="nav-submit-cta">
-              <button className="rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 to-teal-500 text-white font-bold font-jakarta hover:shadow-xl hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300">
-                Submit Project
+              <button className="relative group rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-bold font-jakarta overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="relative">Submit Project</span>
               </button>
             </Link>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-800"
+            className="lg:hidden text-white"
             data-testid="mobile-menu-button"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -93,7 +94,7 @@ export const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-amber-100 shadow-xl"
+          className="lg:hidden backdrop-blur-2xl bg-black/60 border-t border-purple-500/20 shadow-2xl"
           data-testid="mobile-menu"
         >
           <div className="px-6 py-6 space-y-4">
@@ -104,15 +105,15 @@ export const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 font-jakarta font-semibold transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? "text-purple-600"
-                    : "text-gray-700"
+                    ? "text-purple-400"
+                    : "text-gray-300"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <Link to="/submit-project" onClick={() => setIsOpen(false)}>
-              <button className="w-full rounded-full px-6 py-3.5 bg-gradient-to-r from-purple-600 to-teal-500 text-white font-bold font-jakarta mt-4">
+              <button className="w-full rounded-full px-6 py-3.5 bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-bold font-jakarta mt-4">
                 Submit Project
               </button>
             </Link>

@@ -78,7 +78,7 @@ export default function Home() {
         keywords="digital agency, web development, mobile app development, digital marketing, SEO services, social media marketing, branding, UI/UX design, Google Ads, content marketing"
         url="https://agency-hub-167.preview.emergentagent.com"
       />
-      <div className="bg-white/95" data-testid="home-page">
+      <div className="bg-white/10 backdrop-blur-xl" data-testid="home-page">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-50" data-testid="hero-section">
         {/* Decorative Background Elements */}
@@ -105,7 +105,7 @@ export default function Home() {
               </span>
             </motion.div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-syne tracking-tight mb-8 leading-tight text-gray-900" data-testid="hero-headline">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-syne tracking-tight mb-8 leading-tight text-white" data-testid="hero-headline">
               Grow Your Business with
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500">
@@ -113,7 +113,7 @@ export default function Home() {
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-600 font-jakarta mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-400 font-jakarta mb-12 max-w-3xl mx-auto leading-relaxed">
               We blend engineering precision with artistic chaos to construct digital realities that drive results.
               Transform your vision into a high-performing digital presence.
             </p>
@@ -133,7 +133,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 border-2 border-indigo-200 bg-white/95 hover:bg-transparent transition-colors duration-200 font-bold font-jakarta text-lg text-gray-900"
+                  className="rounded-full px-10 py-5 border-2 border-indigo-200 bg-white/10 backdrop-blur-xl hover:bg-black/20 transition-colors duration-200 font-bold font-jakarta text-lg text-white"
                 >
                   Explore Services
                 </motion.button>
@@ -161,7 +161,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-syne tracking-tight mb-6">
               What We Offer
             </h2>
-            <p className="text-gray-600 font-jakarta text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 font-jakarta text-lg max-w-2xl mx-auto">
               Comprehensive digital solutions tailored to elevate your business
             </p>
           </motion.div>
@@ -177,14 +177,14 @@ export default function Home() {
                 whileHover={{ y: -5 }}
               >
                 <Link to={service.link}>
-                  <div className="group relative overflow-hidden rounded-3xl bg-white/95 border border-purple-100/50 p-12 hover:border-indigo-500/50 transition-all duration-300 h-full" data-testid={`service-card-${idx}`}>
+                  <div className="group relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-xl border border-purple-500/50 p-12 hover:border-indigo-500/50 transition-all duration-300 h-full" data-testid={`service-card-${idx}`}>
                     <div className={`absolute top-0 right-0 w-64 h-64 bg-${service.color}-600/10 rounded-full blur-3xl group-hover:bg-${service.color}-600/20 transition-all duration-500`}></div>
                     <div className="relative z-10">
                       <div className={`w-16 h-16 rounded-2xl bg-${service.color}-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                         <service.icon size={32} className={`text-${service.color}-400`} />
                       </div>
                       <h3 className="text-2xl font-bold font-syne mb-4">{service.title}</h3>
-                      <p className="text-gray-600 font-jakarta leading-relaxed mb-6">
+                      <p className="text-gray-400 font-jakarta leading-relaxed mb-6">
                         {service.description}
                       </p>
                       <div className="flex items-center text-indigo-400 font-jakarta font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 px-6 md:px-12 bg-purple-500" data-testid="stats-section">
+      <section className="py-24 px-6 md:px-12 bg-purple-500/100" data-testid="stats-section">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
@@ -216,7 +216,7 @@ export default function Home() {
                 <div className="text-4xl lg:text-5xl font-bold font-syne text-indigo-400 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-jakarta text-sm">{stat.label}</div>
+                <div className="text-gray-400 font-jakarta text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -248,7 +248,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="p-8 rounded-2xl bg-purple-50 border border-white/5 backdrop-blur-sm"
+                className="p-8 rounded-2xl bg-purple-500/10 border border-white/5 backdrop-blur-sm"
                 data-testid={`testimonial-${idx}`}
               >
                 <div className="flex items-center mb-6">
@@ -259,10 +259,10 @@ export default function Home() {
                   />
                   <div>
                     <h4 className="font-bold font-jakarta">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm font-jakarta">{testimonial.role}</p>
+                    <p className="text-gray-400 text-sm font-jakarta">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 font-jakarta leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-300 font-jakarta leading-relaxed">"{testimonial.content}"</p>
               </motion.div>
             ))}
           </div>
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Blog Preview Section */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-purple-500" data-testid="blog-preview-section">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-purple-500/100" data-testid="blog-preview-section">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -305,7 +305,7 @@ export default function Home() {
                 className="group cursor-pointer"
                 data-testid={`blog-card-${idx}`}
               >
-                <div className="rounded-2xl overflow-hidden bg-white/95 border border-purple-100/50 hover:border-indigo-500/50 transition-all duration-300">
+                <div className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-purple-500/50 hover:border-indigo-500/50 transition-all duration-300">
                   <div className="h-48 bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 flex items-center justify-center">
                     <Rocket size={48} className="text-indigo-400 opacity-50" />
                   </div>
@@ -316,9 +316,9 @@ export default function Home() {
                     <h3 className="text-xl font-bold font-syne mt-3 mb-2 group-hover:text-indigo-400 transition-colors duration-300">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 font-jakarta text-sm mb-4">{post.excerpt}</p>
+                    <p className="text-gray-400 font-jakarta text-sm mb-4">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-9000 text-xs font-jakarta">{post.date}</span>
+                      <span className="text-white0 text-xs font-jakarta">{post.date}</span>
                       <ArrowRight size={16} className="text-indigo-400 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
@@ -339,18 +339,18 @@ export default function Home() {
             className="relative rounded-3xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-cyan-600 opacity-10"></div>
-            <div className="relative backdrop-blur-xl bg-white/95/70 border border-purple-100/50 shadow-2xl p-12 md:p-16 text-center">
+            <div className="relative backdrop-blur-xl bg-white/10 backdrop-blur-xl/70 border border-purple-500/50 shadow-2xl p-12 md:p-16 text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-syne tracking-tight mb-6">
                 Ready to Start Your Project?
               </h2>
-              <p className="text-gray-600 font-jakarta text-lg mb-10 max-w-2xl mx-auto">
+              <p className="text-gray-400 font-jakarta text-lg mb-10 max-w-2xl mx-auto">
                 Let's transform your vision into reality. Submit your project details and our team will get back to you within 24 hours.
               </p>
               <Link to="/submit-project" data-testid="final-cta-button">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full px-10 py-5 bg-white/95 text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
+                  className="rounded-full px-10 py-5 bg-white/10 backdrop-blur-xl text-black font-bold font-jakarta text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 inline-flex items-center gap-3"
                 >
                   Submit Your Project Now
                   <ArrowRight size={20} />
