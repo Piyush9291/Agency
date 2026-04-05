@@ -45,7 +45,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <button className="px-8 py-4 rounded-full bg-white text-purple-600 font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 justify-center">
+                  <button className="px-8 py-4 rounded-full bg-white text-blue-600 font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 justify-center">
                     Start Your Project
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -131,7 +131,7 @@ export default function Home() {
                 Let's bring your vision to life
               </p>
               <Link href="/contact">
-                <button className="px-10 py-5 rounded-full bg-white text-purple-600 font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all inline-flex items-center gap-3">
+                <button className="px-10 py-5 rounded-full bg-white text-blue-600 font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all inline-flex items-center gap-3">
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </button>

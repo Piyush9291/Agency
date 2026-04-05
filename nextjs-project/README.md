@@ -3,7 +3,7 @@
 ## 🚀 Simple Next.js Project - Frontend Only
 
 ### 🎨 Beautiful UI Theme
-- **Background:** Purple gradient (from #667eea to #764ba2)
+- **Background:** Sky Blue to Purple gradient (#0ea5e9 → #2563eb → #7c3aed)
 - **Design:** Modern glassmorphism with backdrop blur
 - **Colors:** White text on gradient background
 - **Effects:** Smooth animations and hover effects
@@ -70,12 +70,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 Edit `styles/globals.css`:
 ```css
 body {
-  background: linear-gradient(135deg, #YOUR_COLOR_1 0%, #YOUR_COLOR_2 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #7c3aed 100%);
 }
 ```
 
-**Change Brand Colors:**
-Edit Tailwind classes in components (e.g., `from-purple-600 to-pink-600`)
+**Current Colors:**
+- Sky Blue (#0ea5e9)
+- Blue (#2563eb)  
+- Purple (#7c3aed)
 
 ### 📦 Build for Production
 

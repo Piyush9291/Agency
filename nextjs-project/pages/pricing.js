@@ -63,7 +63,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <Link href="/contact">
-                  <button className="w-full py-4 rounded-full bg-white text-purple-600 font-bold hover:shadow-xl transition-all">
+                  <button className="w-full py-4 rounded-full bg-white text-blue-600 font-bold hover:shadow-xl transition-all">
                     Get Started
                   </button>
                 </Link>
